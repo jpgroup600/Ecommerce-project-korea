@@ -9,14 +9,14 @@ const Navbar = () => {
   };
   return (
     <>
-      <nav>
+      <nav className="lg:px-5">
         <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
           <div className="relative flex h-16 items-center justify-between">
             <div className="absolute inset-y-0 right-0 flex items-center lg:hidden">
               <button
                 onClick={toggleMobileMenu}
                 type="button"
-                className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none  "
                 aria-controls="mobile-menu"
                 aria-expanded="false"
               >

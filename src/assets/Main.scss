@@ -6,42 +6,95 @@
   box-sizing: border-box;
 }
 
-
-nav{
-    background-color: 2px solid $lighWhite ;
-    box-shadow: 0 0 5px 0 #000;
-.logo {
-  span {
+nav {
+  background-color: 2px solid $lighWhite;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  
+  .logo {
+    span {
+      font-family: $Noto;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 23.17px;
+      text-align: left;
+      color: #363940;
+    }
+  }
+  .search {
+    & > input {
+      width: 330px;
+      padding: 3px 20px;
+      border: 1px solid $lightGray;
+      border-radius: 5px;
+      min-height: 30px;
+      &:focus {
+        border-color: transparent;
+      }
+    }
+  }
+  .nav-links {
+    a {
+      font-family: $Noto;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 23.17px;
+      text-align: left;
+      color: $lightGray;
+    }
+  }
+  .Login {
+    padding: 8px;
+    background-color: $green;
     font-family: $Noto;
     font-size: 16px;
     font-weight: 700;
     line-height: 23.17px;
     text-align: left;
-    color: #363940;
+    color: $white  !important;
   }
 }
-.search{
-  & > input{
-    width: 330px;
-    padding: 3px 20px;
-    border: 1px solid $lightGray;
-    border-radius: 5px;
-    min-height: 30px;
-    &:focus{
-      border-color: transparent;
-    }
-  }
-  
-}
-.nav-links{
-  a{
-    font-family:$Noto;
-font-size: 16px;
-font-weight: 700;
-line-height: 23.17px;
-text-align: left;
-color: $lightGray;
 
+
+// slider
+
+.slick-next{
+  right : 80px !important;
+  z-index: 9999;
+  background-color: red;
+    &:before{
+    font-size: 35px !important;
+    background-color: transparent !important;
+    color: $white !important;
+    background-color: black;
   }
 }
+.slick-prev{
+  left : 80px !important;
+  z-index: 9999;
+  background-color: red;
+  &:before{
+    font-size: 35px !important;
+    background-color: transparent !important;
+    color: $white !important;
+    background-color: black;
+  }
+}
+.slick-dots{
+      bottom: 16px !important;
+    
+       button{
+       &:before{
+        height: 8px !important;
+        width: 8px !important;
+        color: $sliderClor !important;
+       }
+      
+      }
+    & > .slick-active{
+      background-color: $green !important;
+      border-radius: 12px;
+      width: 24px;
+      padding: 0 24px;
+      color: $white;
+    }
 }
