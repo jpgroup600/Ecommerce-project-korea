@@ -9,7 +9,7 @@
 nav {
   background-color: 2px solid $lighWhite;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-  
+
   .logo {
     span {
       font-family: $Noto;
@@ -50,51 +50,144 @@ nav {
     font-weight: 700;
     line-height: 23.17px;
     text-align: left;
-    color: $white  !important;
+    color: $white !important;
   }
 }
-
 
 // slider
 
-.slick-next{
-  right : 80px !important;
+.slick-next {
+  right: 80px !important;
   z-index: 9999;
   background-color: red;
-    &:before{
+  &:before {
     font-size: 35px !important;
     background-color: transparent !important;
     color: $white !important;
     background-color: black;
   }
 }
-.slick-prev{
-  left : 80px !important;
+.slick-prev {
+  left: 80px !important;
   z-index: 9999;
   background-color: red;
-  &:before{
+  &:before {
     font-size: 35px !important;
     background-color: transparent !important;
     color: $white !important;
     background-color: black;
   }
 }
-.slick-dots{
-      bottom: 16px !important;
-    
-       button{
-       &:before{
-        height: 8px !important;
-        width: 8px !important;
-        color: $sliderClor !important;
-       }
-      
-      }
-    & > .slick-active{
-      background-color: $green !important;
-      border-radius: 12px;
-      width: 24px;
-      padding: 0 24px;
-      color: $white;
+.slick-dots {
+  bottom: 16px !important;
+
+  button {
+    &:before {
+      height: 8px !important;
+      width: 8px !important;
+      color: $sliderClor !important;
     }
+  }
+  & > .slick-active {
+    background-color: $green !important;
+    border-radius: 12px;
+    width: 24px;
+    padding: 0 24px;
+    color: $white;
+  }
+}
+
+// small Card
+.small-card {
+  padding: 8px;
+  border: 2px solid $smallcard;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & > img {
+    width: 84px;
+  }
+}
+h3 {
+  font-family: $Noto;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 17.38px;
+  text-align: center;
+  color: #000000;
+}
+
+// cateory
+
+.category-section {
+  .category-heading {
+    h3 {
+      font-family: $Noto;
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 31.86px;
+      text-align: left;
+      color: $green;
+    }
+  }
+  .category-btn {
+    a {
+      box-shadow: 0 1px 4px 0 #00000033;
+      width: 75px;
+      height: 30px;
+      padding: 0px 20px;
+      font-family: $Noto;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20.28px;
+      text-align: center;
+      color: #000000;
+    }
+  }
+}
+.category-card-section {
+  h3 {
+    font-family: $Noto;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20.27px;
+    text-align: left;
+  }
+  h4 {
+    font-family: $Noto;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20.27px;
+    text-align: left;
+    color: #000000;
+  }
+  h5 {
+    font-family: $Noto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20.27px;
+    text-align: left;
+    color: $lightGray;
+  }
+}
+
+// event banner
+
+.event-banner {
+  background-color:$smallcard;
+  height: 168px;
+max-width: 1024px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h3 {
+    font-family: $Noto;
+    font-size: 29px;
+    font-weight: 700;
+    line-height: 41.99px;
+    text-align: left;
+    white-space: nowrap;
+    color: #000000;
+  }
 }

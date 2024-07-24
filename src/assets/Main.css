@@ -84,4 +84,88 @@ nav .Login {
   width: 24px;
   padding: 0 24px;
   color: #ffffff;
+}
+
+.small-card {
+  padding: 8px;
+  border: 2px solid #D9D9D9;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.small-card > img {
+  width: 84px;
+}
+
+h3 {
+  font-family: "Noto Sans KR";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 17.38px;
+  text-align: center;
+  color: #000000;
+}
+
+.category-section .category-heading h3 {
+  font-family: "Noto Sans KR";
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 31.86px;
+  text-align: left;
+  color: #2C9512;
+}
+.category-section .category-btn a {
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+  width: 75px;
+  height: 30px;
+  padding: 0px 20px;
+  font-family: "Noto Sans KR";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20.28px;
+  text-align: center;
+  color: #000000;
+}
+
+.category-card-section h3 {
+  font-family: "Noto Sans KR";
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20.27px;
+  text-align: left;
+}
+.category-card-section h4 {
+  font-family: "Noto Sans KR";
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20.27px;
+  text-align: left;
+  color: #000000;
+}
+.category-card-section h5 {
+  font-family: "Noto Sans KR";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20.27px;
+  text-align: left;
+  color: #6D6D6D;
+}
+
+.event-banner {
+  background-color: #D9D9D9;
+  height: 168px;
+  max-width: 1024px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.event-banner h3 {
+  font-family: "Noto Sans KR";
+  font-size: 29px;
+  font-weight: 700;
+  line-height: 41.99px;
+  text-align: left;
+  white-space: nowrap;
+  color: #000000;
 }/*# sourceMappingURL=Main.css.map */
