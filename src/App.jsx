@@ -6,6 +6,7 @@ import Category from './Components/Category'
 import EventBanner from './Components/EventBanner'
 import AgainCategory from './Components/AgainCategory'
 import ContactBanner from './Components/ContactBanner'
+import Footer from './Components/Footer'
 
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
 
     <AgainCategory />
     <ContactBanner />
+    <Footer />
     </>
   )
 }

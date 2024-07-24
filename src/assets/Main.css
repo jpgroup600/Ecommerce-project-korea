@@ -168,4 +168,23 @@ h3 {
   text-align: left;
   white-space: nowrap;
   color: #000000;
+}
+
+footer {
+  background-color: #9E9E9E;
+  padding: 20px;
+}
+footer .footer-logo {
+  padding-top: 60px;
+}
+footer .footer-logo h1 {
+  font-family: "Noto Sans KR";
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 37.65px;
+  text-align: left;
+  color: #ffffff;
+}
+footer .footer-sec h3 {
+  padding: -80px !important;
 }/*# sourceMappingURL=Main.css.map */
