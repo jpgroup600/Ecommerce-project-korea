@@ -1,0 +1,47 @@
+@import "./Variable.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+nav{
+    background-color: 2px solid $lighWhite ;
+    box-shadow: 0 0 5px 0 #000;
+.logo {
+  span {
+    font-family: $Noto;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 23.17px;
+    text-align: left;
+    color: #363940;
+  }
+}
+.search{
+  & > input{
+    width: 330px;
+    padding: 3px 20px;
+    border: 1px solid $lightGray;
+    border-radius: 5px;
+    min-height: 30px;
+    &:focus{
+      border-color: transparent;
+    }
+  }
+  
+}
+.nav-links{
+  a{
+    font-family:$Noto;
+font-size: 16px;
+font-weight: 700;
+line-height: 23.17px;
+text-align: left;
+color: $lightGray;
+
+  }
+}
+}
