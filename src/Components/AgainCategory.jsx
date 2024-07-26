@@ -26,6 +26,10 @@ const AgainCategory = () => {
                     src={items.image}
                     className="mb-3"
                     alt=""
+                    style={{   width: '291px !',
+
+                      height: '163px',
+                      borderRadius: '10px',}}
                 
                   />
                   <h3 className="text-start  mx-5 mb-3 mt-4 flex gap-3">

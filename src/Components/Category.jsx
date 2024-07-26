@@ -4,7 +4,7 @@ import Blog from "../assets/images/Blog.svg"
 
 const Category = () => {
   const data = CategoryData;
-  let items = data.slice(0,6)
+  let items = data
 
   return (
     <>
