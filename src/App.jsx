@@ -7,6 +7,7 @@ import EventBanner from './Components/EventBanner'
 import AgainCategory from './Components/AgainCategory'
 import ContactBanner from './Components/ContactBanner'
 import Footer from './Components/Footer'
+import Slider2 from './Components/Slider2'
 
 
 const App = () => {
@@ -18,7 +19,7 @@ const App = () => {
     <Category />
     <EventBanner />
 
-
+    <Slider2 />
     <AgainCategory />
     <ContactBanner />
     <Footer />

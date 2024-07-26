@@ -1,17 +1,36 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
 
+const Slider2 = () => {
 
-const SliderContainer = () => {
+
+    const [time, setTime] = useState(new Date());
+
+    useEffect(() => {
+      const updateTime = () => {
+        setTime(new Date());
+      };
+  
+      const intervalId = setInterval(updateTime, 1000);
+  
+      return () => clearInterval(intervalId);
+    }, []);
+  
+    const formatTime = (date) => {
+      const hours = String(date.getHours()).padStart(2, '0');
+      const minutes = String(date.getMinutes()).padStart(2, '0');
+      const seconds = String(date.getSeconds()).padStart(2, '0');
+      return `${hours} : ${minutes} : ${seconds}`;
+    };
+
     const settings = {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 1,
+        slidesToShow: 4,
         slidesToScroll: 2,
-        autoplay: true,
         responsive: [
           {
             breakpoint: 1024,
@@ -34,6 +53,8 @@ const SliderContainer = () => {
           }
         ]
       };
+
+
       const slideData = [
         { id: 1, imageUrl: 'https://picsum.photos/id/1015/800/600' },
         { id: 2, imageUrl: 'https://picsum.photos/id/1016/800/600' },
@@ -43,19 +64,28 @@ const SliderContainer = () => {
       ];
   return (
     <>
-    <div className="container lg:px-6  mx-auto mt-8 slider">
-    <Slider {...settings}>
+    <div className="slider-container mx-auto slider-2 container-fluid   px-12">
+    <div className="slider-2-heading">
+        <h2>Remaining time for open</h2>
+    </div>
+    <div className="time slider-2-time">
+        <h3>{formatTime(time)}</h3>
+        <h4>미리 찜해두고 혜택 받아가세요!!</h4>
+    </div>
+    
+        <Slider {...settings}>
     {slideData.map(slide => (
         <div key={slide.id}>
-            <div className="lg:grid-cols-10">
-          <img src={slide.imageUrl} className='img-fluid' alt={`Slide ${slide.id}`} style={{maxWidth:'100%',width:'100%',height:'450px'}}/>
-          </div>
+        
+          <img src={slide.imageUrl} className='img-fluid' alt={`Slide ${slide.id}`} style={{maxWidth:'291px',width:'100%',height:'450px'}}/>
+
         </div>
       ))}
     </Slider>
+    
     </div>
     </>
   )
 }
 
-export default SliderContainer
+export default Slider2

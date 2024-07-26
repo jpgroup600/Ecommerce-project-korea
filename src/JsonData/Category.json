@@ -42,4 +42,19 @@
         "subheading":"[브랜드] 제목제목제목제목",
         "coupon":"5만원 이용권"
     }
+    ,
+    {
+        "id":"7",
+        "image":"https://www.brandsxpress.com/cdn/shop/files/yellowpoloa_396x.jpg?v=1685364793",
+        "heading":"5Days Left ㅣ Enroll 42 / 4",
+        "subheading":"[브랜드] 제목제목제목제목",
+        "coupon":"5만원 이용권"
+    },
+    {
+        "id":"8",
+        "image":"https://www.brandsxpress.com/cdn/shop/files/yellowpoloa_396x.jpg?v=1685364793",
+        "heading":"5Days Left ㅣ Enroll 42 / 4",
+        "subheading":"[브랜드] 제목제목제목제목",
+        "coupon":"5만원 이용권"
+    }
 ]

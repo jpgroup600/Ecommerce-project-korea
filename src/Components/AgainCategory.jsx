@@ -4,7 +4,7 @@ import Blog from "../assets/images/Blog.svg"
 
 const AgainCategory = () => {
   const data = CategoryData;
-  console.log(data)
+
   return (
     <>
       <div className="container mx-auto mt-12">
@@ -16,7 +16,7 @@ const AgainCategory = () => {
             <a href="">더보기</a>
           </div>
         </div>
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 mt-8 gap-6">
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 sm:grid-cols-2 mt-8 ">
           {Array.isArray(data) &&
             data.length > 0 &&
             data.map((items) => (
@@ -26,9 +26,9 @@ const AgainCategory = () => {
                     src={items.image}
                     className="mb-3"
                     alt=""
-                    style={{ borderRadius: "35px", height: "339px" }}
+                
                   />
-                  <h3 className="text-start  mx-5 mb-3 flex gap-3">
+                  <h3 className="text-start  mx-5 mb-3 mt-4 flex gap-3">
                   <span><img src={Blog} alt="" /></span>
                     {items.heading}
                   </h3>

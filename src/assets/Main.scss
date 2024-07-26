@@ -7,6 +7,7 @@
 }
 
 nav {
+  padding: 0 35px;
   background-color: 2px solid $lighWhite;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 
@@ -59,7 +60,7 @@ nav {
 .slick-next {
   right: 80px !important;
   z-index: 9999;
-  background-color: red;
+
   &:before {
     font-size: 35px !important;
     background-color: transparent !important;
@@ -99,12 +100,14 @@ nav {
 
 // small Card
 .small-card {
-  padding: 8px;
+  margin-top: 20px;
   border: 2px solid $smallcard;
   border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 84px;
+  min-height: 84px;
   & > img {
     width: 84px;
   }
@@ -147,6 +150,14 @@ h3 {
   }
 }
 .category-card-section {
+  & > img {
+    // max-width: 291px;
+    width: 291px;
+
+    height: 163px;
+    border-radius: 10px;
+    margin: 0 auto;
+  }
   h3 {
     font-family: $Noto;
     font-size: 14px;
@@ -172,15 +183,23 @@ h3 {
   }
 }
 
+// slider
+.slider {
+  max-width: 1225px;
+  height: 423px;
+}
+
 // event banner
 
 .event-banner {
-  background-color:$smallcard;
+  background-color: $smallcard;
   height: 168px;
-max-width: 1024px;
+  max-width: 1224px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+
   h3 {
     font-family: $Noto;
     font-size: 29px;
@@ -192,25 +211,71 @@ max-width: 1024px;
   }
 }
 
-// footer
-footer{
-  background-color: $footerBg;
-  padding: 20px;
-  .footer-logo{
-    padding-top: 60px;
-    h1{
+.slider-2 {
+  min-height: 420px;
+  background-color: #343434;
+  .slider-2-heading {
+    padding-top: 32px;
+    h2 {
       font-family: $Noto;
-font-size: 26px;
-font-weight: 400;
-line-height: 37.65px;
-text-align: left;
-color: $white;
-
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 31.86px;
+      text-align: left;
+      color: $white;
     }
   }
-  .footer-sec{
-    h3{
+  .slider-2-time {
+    padding-top: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h3 {
+      font-family: $Noto;
+      font-size: 45px;
+      font-weight: 500;
+      line-height: 65.16px;
+      letter-spacing: -0.04em;
+      text-align: left;
+      color: $white;
+    }
+    h4 {
+      font-family: $Noto;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 23.17px;
+      text-align: left;
+      color: $white;
+    }
+  }
+}
+
+// footer
+footer {
+  background-color: $footerBg;
+  padding: 20px;
+  .footer-logo {
+    padding-top: 60px;
+    h1 {
+      font-family: $Noto;
+      font-size: 26px;
+      font-weight: 400;
+      line-height: 37.65px;
+      text-align: left;
+      color: $white;
+    }
+  }
+  .footer-sec {
+    h3 {
       padding: -80px !important;
     }
+  }
+}
+
+
+
+@media (max-width:510px){
+  .slider-2-time{
+    flex-direction: column;
   }
 }
