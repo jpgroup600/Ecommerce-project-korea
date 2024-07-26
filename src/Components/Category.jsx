@@ -14,10 +14,10 @@ const Category = () => {
             <h3>Catagory</h3>
           </div>
           <div className="category-btn">
-            <a href="">더보기</a>
+            <a href="" className="mx-2">더보기</a>
           </div>
         </div>
-        <div className="grid lg:grid-cols-3 md:grid-cols-2  sm:grid-cols-2 mt-8 ">
+        <div className="grid lg:grid-cols-4 md:grid-cols-2  sm:grid-cols-2 mt-8 ">
           {Array.isArray(items) &&
             items.length > 0 &&
             items.map((items) => (
