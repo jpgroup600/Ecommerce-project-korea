@@ -94,7 +94,6 @@ nav {
     border-radius: 12px;
     width: 24px;
     padding: 0 24px;
-    color: $white;
   }
 }
 
@@ -199,6 +198,7 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 10px;
 
   h3 {
     font-family: $Noto;
@@ -254,28 +254,98 @@ h3 {
 footer {
   background-color: $footerBg;
   padding: 20px;
-  .footer-logo {
-    padding-top: 60px;
-    h1 {
+  .footer-container {
+    width: 100%;
+    max-width: 1118px;
+
+    .footer-logo {
+
+      padding-top: 80px;
+      h1 {
+        font-family: $Noto;
+        font-size: 26px;
+        font-weight: 400;
+        line-height: 37.65px;
+        text-align: left;
+        color: $white;
+      }
+    }
+    .footer-sec {
+      margin-left: 8px;
+      h3 {
+        margin-left: -60px;
+        font-family: $Noto;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 23.17px;
+        text-align: left;
+        color: $white;
+
+
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0px;
+          left: 0;
+          width: 20px;
+          height: 25p;
+          background-color: red;
+        }
+      }
+    }
+    .footer-para-2 {
+     
+      p {
+        margin-top:-30px;
+        font-family: $Noto;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20.27px;
+        text-align: left;
+        color: $white;
+      }
+    }
+    .third{
+      white-space: nowrap;
+      margin-left: -160px;
+      margin-top: 20px;
+    }
+
+  }
+  .copyright{
+    p{
       font-family: $Noto;
-      font-size: 26px;
-      font-weight: 400;
-      line-height: 37.65px;
-      text-align: left;
-      color: $white;
+font-size: 14px;
+font-weight: 400;
+line-height: 20.27px;
+text-align: center;
+margin-left: -280px;
+color: $white;
+
     }
   }
-  .footer-sec {
-    h3 {
-      padding: -80px !important;
-    }
+}
+
+@media (max-width: 510px) {
+  .slider-2-time {
+    flex-direction: column;
   }
 }
 
 
 
-@media (max-width:510px){
-  .slider-2-time{
-    flex-direction: column;
+@media (max-width:1023px){
+  .copyright{
+    p{
+      margin-left: 0 !important;
+    }
+  }
+  .footer-logo{
+    padding-top: 40px !important;
+  }
+  .footer-para-2{
+    p{
+      margin-left: 0 !important;
+    }
   }
 }

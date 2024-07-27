@@ -75,7 +75,7 @@ const Slider2 = () => {
     
         <Slider {...settings}>
     {slideData.map(slide => (
-        <div key={slide.id}>
+        <div key={slide.id} style={{maxWidth:'1118px',width:'100%'}}>
         
           <img src={slide.imageUrl} className='img-fluid' alt={`Slide ${slide.id}`} style={{maxWidth:'291px',width:'100%',height:'450px'}}/>
 
