@@ -16,7 +16,7 @@ const SmallCard = () => {
                         <div className="small-card mb-3">
                             <img src={item.image} alt="" />
                             </div>
-                            <h3>{item.Loaction}</h3>
+                            <h3 style={{marginLeft:'-15px'}}>{item.Loaction}</h3>
                     </div>
                  
                     
