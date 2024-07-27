@@ -13,7 +13,6 @@ const SliderContainer = () => {
         slidesToScroll: 2,
         autoplay: true,
         fade: true,                      // Fade transition effect
-        cssEase: 'linear' ,
         responsive: [
           {
             breakpoint: 1024,

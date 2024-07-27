@@ -38,7 +38,6 @@ const Slider2 = () => {
               slidesToShow: 2,
               slidesToScroll: 1,
               infinite: true,
-              dots: true,
               autoplay: true,
             }
           },
@@ -75,9 +74,9 @@ const Slider2 = () => {
     
         <Slider {...settings}>
     {slideData.map(slide => (
-        <div key={slide.id} style={{maxWidth:'1118px',width:'100%'}}>
+        <div key={slide.id} className='px-8' style={{maxWidth:'1068px',width:'100%',margin:'0 auto'}}>
         
-          <img src={slide.imageUrl} className='img-fluid' alt={`Slide ${slide.id}`} style={{maxWidth:'291px',width:'100%',height:'450px'}}/>
+          <img src={slide.imageUrl} className='bg-red-800' alt={`Slide ${slide.id}`} style={{width:'290px',height:'163px',}}/>
 
         </div>
       ))}
