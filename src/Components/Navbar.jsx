@@ -102,7 +102,7 @@ const Navbar = () => {
           className={`${isMobileMenuOpen ? "block" : "hidden"} lg:hidden nav-links`}
           id="mobile-menu"
         >
-          <div className="space-y-1 px-2 pb-3 pt-2">
+          <div className="space-y-1 px-2 pb-3 ">
             <a
               href="#"
               className="block rounded-md  px-3 py-2 "
