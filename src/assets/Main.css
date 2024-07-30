@@ -138,21 +138,21 @@ h3 {
 .category-card-section h3 {
   font-family: "Noto Sans KR";
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 20.27px;
   text-align: left;
 }
 .category-card-section h4 {
   font-family: "Noto Sans KR";
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 20.27px;
   text-align: left;
   color: #000000;
 }
 .category-card-section h5 {
   font-family: "Noto Sans KR";
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 400;
   line-height: 20.27px;
   text-align: left;
