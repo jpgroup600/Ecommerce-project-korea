@@ -43,17 +43,28 @@ nav {
     }
   }
   .Login {
-  
+    margin-top: 5px;
     padding: 8px;
-    background-color: $green;
-    font-family: $Noto;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 23.17px;
+    background-color: $green; 
+    font-family: $Noto; 
+    font-size: 16px; 
+    font-weight: 700; 
+    line-height: 23.17px; 
     text-align: left;
-    border-radius: 5px;
-    color: $white !important;
+    border-radius: 5px; 
+    color: $white !important; 
+    height: 30px;
+    max-width: 70px; 
+    border: none; 
+    cursor: pointer; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+    
+
   }
+  
 }
 
 // slider
@@ -72,7 +83,7 @@ nav {
 .slick-prev {
   left: 80px !important;
   z-index: 9999;
-  background-color: red;
+
   &:before {
     font-size: 35px !important;
     background-color: transparent !important;
@@ -82,21 +93,43 @@ nav {
 }
 .slick-dots {
   bottom: 16px !important;
-
+  // color: red  !important;
+  
   button {
     &:before {
+      content: ''; 
       height: 8px !important;
       width: 8px !important;
-      color: $sliderClor !important;
+      background-color: $sliderClor !important; 
+      border-radius: 50%;
+      position: absolute;
+      top: 50%; 
+      left: 50%; 
+      transform: translate(-50%, -50%); 
+      transition: background-color 0.3s ease, width 0.3s ease, height 0.3s ease; 
     }
   }
+
   & > .slick-active {
-    background-color: $green !important;
-    border-radius: 12px;
-    width: 24px;
-    padding: 0 24px;
+    button:before {
+      background-color: $green !important; 
+      width: 24px !important;
+      height: 8px !important;
+      position: absolute;
+      color: transparent !important;
+      border-radius: 12px; 
+      transition: background-color 0.3s ease, width 0.3s ease, height 0.3s ease;
+    }
+  }
+
+  button {
+ 
+    &:not(.slick-active):before {
+      transition: background-color 0.3s ease; 
+    }
   }
 }
+
 
 // small Card
 .small-card {
@@ -136,10 +169,12 @@ h3 {
   }
   .category-btn {
     a {
+      width: 39px;
+      height: 20px;
       box-shadow: 0 1px 4px 0 #00000033;
       width: 75px;
       height: 30px;
-      padding: 0px 20px;
+      padding: 0px 8px;
       font-family: $Noto;
       font-size: 14px;
       font-weight: 400;
@@ -213,6 +248,8 @@ h3 {
 }
 
 .slider-2 {
+  padding: 20px 130px !important;
+
   min-height: 420px;
   background-color: #343434;
   .slider-2-heading {
@@ -249,6 +286,44 @@ h3 {
       color: $white;
     }
   }
+
+
+.slick-prev, .slick-next {
+  position: absolute;
+  top: 50%; 
+  transform: translateY(-50%); 
+  width: 40px;
+  height: 40px; 
+  background-size: 20px 20px; 
+  background-repeat: no-repeat;
+  background-position: center; 
+  border: none; 
+  cursor: pointer; 
+  z-index: 1000; 
+  transition:0.3s ease;
+ 
+}
+
+.slick-prev {
+  left: -50px !important; 
+  background-image: url('../assets/images/Right.svg'); 
+  &::before{
+    font-family: Arial, Helvetica, sans-serif !important;
+    content: " " !important;
+  }
+  
+}
+
+// Styling for Next Arrow
+.slick-next {
+  right: -50px !important; 
+  background-image: url('../assets/images/Left.svg'); 
+  &::before{
+    content: " " !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+  }
+}
+
 }
 
 // footer

@@ -37,6 +37,7 @@ nav .nav-links a {
   color: #6D6D6D;
 }
 nav .Login {
+  margin-top: 5px;
   padding: 8px;
   background-color: #2C9512;
   font-family: "Noto Sans KR";
@@ -46,6 +47,14 @@ nav .Login {
   text-align: left;
   border-radius: 5px;
   color: #ffffff !important;
+  height: 30px;
+  max-width: 70px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .slick-next {
@@ -62,7 +71,6 @@ nav .Login {
 .slick-prev {
   left: 80px !important;
   z-index: 9999;
-  background-color: red;
 }
 .slick-prev:before {
   font-size: 35px !important;
@@ -75,15 +83,28 @@ nav .Login {
   bottom: 16px !important;
 }
 .slick-dots button:before {
+  content: "";
   height: 8px !important;
   width: 8px !important;
-  color: #DAE1E7 !important;
+  background-color: #DAE1E7 !important;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: background-color 0.3s ease, width 0.3s ease, height 0.3s ease;
 }
-.slick-dots > .slick-active {
+.slick-dots > .slick-active button:before {
   background-color: #2C9512 !important;
+  width: 24px !important;
+  height: 8px !important;
+  position: absolute;
+  color: transparent !important;
   border-radius: 12px;
-  width: 24px;
-  padding: 0 24px;
+  transition: background-color 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+.slick-dots button:not(.slick-active):before {
+  transition: background-color 0.3s ease;
 }
 
 .small-card {
@@ -118,10 +139,12 @@ h3 {
   color: #2C9512;
 }
 .category-section .category-btn a {
+  width: 39px;
+  height: 20px;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
   width: 75px;
   height: 30px;
-  padding: 0px 20px;
+  padding: 0px 8px;
   font-family: "Noto Sans KR";
   font-size: 14px;
   font-weight: 400;
@@ -186,6 +209,7 @@ h3 {
 }
 
 .slider-2 {
+  padding: 20px 130px !important;
   min-height: 420px;
   background-color: #343434;
 }
@@ -222,6 +246,36 @@ h3 {
   line-height: 23.17px;
   text-align: left;
   color: #ffffff;
+}
+.slider-2 .slick-prev, .slider-2 .slick-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+  transition: 0.3s ease;
+}
+.slider-2 .slick-prev {
+  left: -50px !important;
+  background-image: url("../assets/images/Right.svg");
+}
+.slider-2 .slick-prev::before {
+  font-family: Arial, Helvetica, sans-serif !important;
+  content: " " !important;
+}
+.slider-2 .slick-next {
+  right: -50px !important;
+  background-image: url("../assets/images/Left.svg");
+}
+.slider-2 .slick-next::before {
+  content: " " !important;
+  font-family: Arial, Helvetica, sans-serif !important;
 }
 
 footer {
