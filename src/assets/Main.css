@@ -59,6 +59,7 @@ nav .Login {
 
 .slider {
   max-width: 1225px;
+  margin: 0 auto;
 }
 .slider .slick-next {
   right: 80px !important;
