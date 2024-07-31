@@ -12,7 +12,7 @@ const SliderContainer = () => {
         slidesToShow: 1,
         slidesToScroll: 2,
         autoplay: true,
-        fade: true,                      // Fade transition effect
+        fade: true,               
         responsive: [
           {
             breakpoint: 1024,
@@ -44,7 +44,7 @@ const SliderContainer = () => {
       ];
   return (
     <>
-    <div className="container lg:px-6  mx-auto mt-8 slider">
+    <div className="container   mx-auto mt-8 slider">
     <Slider {...settings}>
     {slideData.map(slide => (
         <div key={slide.id}>
