@@ -44,7 +44,7 @@ const SliderContainer = () => {
       ];
   return (
     <>
-    <div className="container   mx-auto mt-8 slider">
+    <div className="container   mx-auto mt-8 slider 2xl:px-12">
     <Slider {...settings}>
     {slideData.map(slide => (
         <div key={slide.id}>

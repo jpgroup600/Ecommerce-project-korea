@@ -6,8 +6,7 @@
 }
 
 nav {
-  max-width: 1225px;
-  padding: 0 85px;
+  padding: 0 35px;
   background-color: 2px solid #F5F3F3;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
@@ -60,8 +59,6 @@ nav .Login {
 
 .slider {
   max-width: 1225px;
-  width: 100%;
-  padding: 0 100px !important;
 }
 .slider .slick-next {
   right: 80px !important;
