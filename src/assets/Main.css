@@ -251,12 +251,18 @@ nav .Login {
 }
 
 .slider-2 {
-  padding: 20px 150px;
+  padding: 20px 130px;
   min-height: 420px;
   background-color: #343434;
 }
+.slider-2 .slick-initialized {
+  max-width: 1225px;
+  margin: 0 auto;
+}
 .slider-2 .slider-2-heading {
   padding-top: 32px;
+  max-width: 1225px;
+  margin: 0 auto;
 }
 .slider-2 .slider-2-heading h2 {
   font-family: "Noto Sans KR";
@@ -267,6 +273,8 @@ nav .Login {
   color: #ffffff;
 }
 .slider-2 .slider-2-time {
+  margin: 0 auto;
+  max-width: 1225px;
   padding-top: 13px;
   display: flex;
   align-items: center;
