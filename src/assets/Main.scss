@@ -215,19 +215,21 @@ h3 {
     margin: 0 auto;
   }
   h3 {
-    font-family: $Noto;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 20.27px;
-    text-align: left;
-  }
-  h4 {
-    font-family: $Noto;
+    font-family: $Noto Sans KR;
     font-size: 14px;
     font-weight: 700;
     line-height: 20.27px;
     text-align: left;
     color: #000000;
+  }
+  h4 {
+    font-family: $Noto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23.17px;
+    text-align: left;
+    color: #000000;
+    
   }
   h5 {
     font-family: $Noto;
@@ -305,7 +307,7 @@ h3 {
 }
 
 .slider-2 {
-  padding: 20px 130px ;
+  padding: 20px 140px ;
   min-height: 420px;
   background-color: #343434;
   .slick-initialized{
@@ -352,10 +354,30 @@ h3 {
     }
   }
 
+  .slider-2-heading-bottom{
+    h3{
+      font-family: $Noto;
+font-size: 16px;
+font-weight: 400;
+line-height: 23.17px;
+text-align: left;
+color: $white;
+
+    }
+    h4{
+      font-family: $Noto;
+font-size: 14px;
+font-weight: 400;
+line-height: 20.27px;
+text-align: left;
+color: $white;
+
+    }
+  }
 
 .slick-prev, .slick-next {
   position: absolute;
-  top: 50%; 
+  top: 30%; 
   transform: translateY(-50%); 
   width: 40px;
   height: 40px; 
@@ -366,6 +388,7 @@ h3 {
   cursor: pointer; 
   z-index: 1000; 
   transition:0.3s ease;
+
  
 }
 
@@ -376,6 +399,11 @@ h3 {
     font-family: Arial, Helvetica, sans-serif !important;
     content: " " !important;
   }
+  &:hover{
+    background:url('../assets/images/Right.svg');  
+    background-repeat: no-repeat;
+ 
+    }
   
   
 }
@@ -387,6 +415,11 @@ h3 {
   &::before{
     content: " " !important;
     font-family: Arial, Helvetica, sans-serif !important;
+  }
+  &:hover{
+    
+    background: url('../assets/images/Left.svg') !important;  
+    background-repeat: no-repeat !important;
   }
   
 }

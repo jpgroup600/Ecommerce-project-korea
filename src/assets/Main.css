@@ -172,17 +172,18 @@ nav .Login {
   margin: 0 auto;
 }
 .category-card-section h3 {
-  font-family: "Noto Sans KR";
+  font-family: "Noto Sans KR" Sans KR;
   font-size: 14px;
   font-weight: 700;
   line-height: 20.27px;
   text-align: left;
+  color: #000000;
 }
 .category-card-section h4 {
   font-family: "Noto Sans KR";
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 20.27px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23.17px;
   text-align: left;
   color: #000000;
 }
@@ -251,7 +252,7 @@ nav .Login {
 }
 
 .slider-2 {
-  padding: 20px 130px;
+  padding: 20px 140px;
   min-height: 420px;
   background-color: #343434;
 }
@@ -297,9 +298,25 @@ nav .Login {
   text-align: left;
   color: #ffffff;
 }
+.slider-2 .slider-2-heading-bottom h3 {
+  font-family: "Noto Sans KR";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23.17px;
+  text-align: left;
+  color: #ffffff;
+}
+.slider-2 .slider-2-heading-bottom h4 {
+  font-family: "Noto Sans KR";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20.27px;
+  text-align: left;
+  color: #ffffff;
+}
 .slider-2 .slick-prev, .slider-2 .slick-next {
   position: absolute;
-  top: 50%;
+  top: 30%;
   transform: translateY(-50%);
   width: 40px;
   height: 40px;
@@ -319,6 +336,10 @@ nav .Login {
   font-family: Arial, Helvetica, sans-serif !important;
   content: " " !important;
 }
+.slider-2 .slick-prev:hover {
+  background: url("../assets/images/Right.svg");
+  background-repeat: no-repeat;
+}
 .slider-2 .slick-next {
   right: -50px !important;
   background-image: url("../assets/images/Left.svg");
@@ -326,6 +347,10 @@ nav .Login {
 .slider-2 .slick-next::before {
   content: " " !important;
   font-family: Arial, Helvetica, sans-serif !important;
+}
+.slider-2 .slick-next:hover {
+  background: url("../assets/images/Left.svg") !important;
+  background-repeat: no-repeat !important;
 }
 
 footer {

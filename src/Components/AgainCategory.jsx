@@ -7,21 +7,21 @@ const AgainCategory = () => {
 
   return (
     <>
-      <div className="container mx-auto mt-12 px-12">
-        <div className="category-section 2xl:px-12 xl:px-12 lg:px-5 flex justify-between">
-          <div className="category-heading">
+      <div className="container mx-auto mt-12 lg:px-12">
+        <div className="category-section 2xl:px-6 xl:px-12 lg:px-5 flex justify-between mb-5 2xl:mb-8 " style={{maxWidth:'1225px',margin:'0 auto'}} >
+          <div className="category-heading" >
             <h3>Catagory</h3>
           </div>
-          <div className="category-btn">
+          <div className="category-btn" >
             <a href="">더보기</a>
           </div>
         </div>
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 sm:grid-cols-2 mt-8 ">
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 sm:grid-cols-2 mt-8 " style={{maxWidth:'1225px',margin:'0 auto'}}>
           {Array.isArray(data) &&
             data.length > 0 &&
             data.map((items) => (
               <>
-                <div className="category-card-section px-4  mx-auto">
+                <div className="category-card-section px-4  mx-auto pt-6">
                   <img
                     src={items.image}
                     className="mb-3"
