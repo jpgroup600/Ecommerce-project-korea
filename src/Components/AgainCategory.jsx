@@ -7,8 +7,8 @@ const AgainCategory = () => {
 
   return (
     <>
-      <div className="container mx-auto mt-12">
-        <div className="category-section px-4 flex justify-between">
+      <div className="container mx-auto mt-12 px-12">
+        <div className="category-section 2xl:px-12 xl:px-12 lg:px-5 flex justify-between">
           <div className="category-heading">
             <h3>Catagory</h3>
           </div>
@@ -32,7 +32,7 @@ const AgainCategory = () => {
                       borderRadius: '10px',}}
                 
                   />
-                  <h3 className="text-start  mx-5 mb-3 mt-4 flex gap-3">
+                  <h3 className="text-start   mb-3 mt-4 flex items-center gap-2">
                   <span><img src={Blog} alt="" /></span>
                     {items.heading}
                   </h3>

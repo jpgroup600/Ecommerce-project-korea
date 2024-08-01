@@ -69,9 +69,14 @@ nav {
 
 
 // slider
+
 .slider{
 max-width: 1225px;
 margin: 0 auto;
+.px-12{
+  padding: 0 7rem !important;
+}
+
 
 .slick-next {
   right: 80px !important;
@@ -281,8 +286,8 @@ h3 {
 .event-banner {
   background-color: $smallcard;
   height: 168px;
-  max-width: 1224px;
-  width: 100%;
+ max-width: 1225px;
+ margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -300,8 +305,7 @@ h3 {
 }
 
 .slider-2 {
-  padding: 20px 130px !important;
-
+  padding: 20px 130px;
   min-height: 420px;
   background-color: #343434;
   .slider-2-heading {
@@ -455,6 +459,12 @@ color: $white;
     }
   }
 }
+
+
+
+
+
+
 
 @media (max-width: 510px) {
   .slider-2-time {

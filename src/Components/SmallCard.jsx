@@ -7,9 +7,9 @@ const SmallCard = () => {
 
   return (
     <>
-    <div className="container mx-auto mt-8">
+    <div className="container mx-auto mt-8 px-12">
  
-        <div className="grid lg:grid-cols-9 md:grid-cols-6 sm:grid-cols-6 grid-cols-3 px-4 gap-4 ">
+        <div className="grid lg:grid-cols-9 md:grid-cols-6 sm:grid-cols-6 grid-cols-3 px-4  px-12 ">
             {data.map((item,index)=>{
                 return(
                     <>   

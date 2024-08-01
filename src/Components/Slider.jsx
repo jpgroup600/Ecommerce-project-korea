@@ -44,11 +44,11 @@ const SliderContainer = () => {
       ];
   return (
     <>
-    <div className="container   mx-auto mt-8 slider 2xl:px-12 slider-container">
-    <Slider {...settings}>
+    <div className="container   mx-auto mt-8 slider 2xl:px-12 px-12" style={{padding:'0 285px !importance'}}>
+    <Slider {...settings} >
     {slideData.map(slide => (
         <div key={slide.id}>
-            <div className="lg:grid-cols-10">
+            <div className="lg:grid-cols-10 2xl:px-11">
           <img src={slide.imageUrl} className='img-fluid' alt={`Slide ${slide.id}`} style={{maxWidth:'100%',width:'100%',height:'450px',borderRadius: '20px'}}/>
           </div>
         </div>

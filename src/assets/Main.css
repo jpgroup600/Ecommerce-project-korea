@@ -61,6 +61,9 @@ nav .Login {
   max-width: 1225px;
   margin: 0 auto;
 }
+.slider .px-12 {
+  padding: 0 7rem !important;
+}
 .slider .slick-next {
   right: 80px !important;
   z-index: 9999;
@@ -230,8 +233,8 @@ nav .Login {
 .event-banner {
   background-color: #D9D9D9;
   height: 168px;
-  max-width: 1224px;
-  width: 100%;
+  max-width: 1225px;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -248,7 +251,7 @@ nav .Login {
 }
 
 .slider-2 {
-  padding: 20px 130px !important;
+  padding: 20px 130px;
   min-height: 420px;
   background-color: #343434;
 }
