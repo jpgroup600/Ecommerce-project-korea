@@ -305,9 +305,10 @@ h3 {
 }
 
 .slider-2 {
-  padding: 20px 130px;
+  padding: 20px 150px ;
   min-height: 420px;
   background-color: #343434;
+
   .slider-2-heading {
     padding-top: 32px;
     h2 {
@@ -464,7 +465,11 @@ color: $white;
 
 
 
-
+// @media (max-width:1920px) {
+//   .slider-2{
+//     padding: 20px 300px;
+//   }
+// }
 
 @media (max-width: 510px) {
   .slider-2-time {
