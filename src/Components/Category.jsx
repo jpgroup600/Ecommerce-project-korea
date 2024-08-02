@@ -21,7 +21,7 @@ const Category = () => {
             data.length > 0 &&
             data.map((items) => (
               <>
-                <div className="category-card-section px-4  mx-auto pt-6">
+                <div className="category-card-section px-4  mx-auto pt-6" >
                   <img
                     src={items.image}
                     className="mb-3"
@@ -36,7 +36,7 @@ const Category = () => {
                   <span><img src={Blog} alt="" /></span>
                     {items.heading}
                   </h3>
-                  <h4 className="text-start  mx-5 mb-3">
+                  <h4 className="text-start  mx-5 ">
                  {items.subheading}
                   </h4>
                   <h5 className="text-start  mx-5 mb-3">{items.coupon}</h5>
