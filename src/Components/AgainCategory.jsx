@@ -21,22 +21,20 @@ const AgainCategory = () => {
             data.length > 0 &&
             data.map((items) => (
               <>
-                <div className="category-card-section px-4  mx-auto pt-6">
+                <div className="category-card-section   mx-auto pt-6"    style={{width:'291px'}}>
                   <img
                     src={items.image}
-                    className="mb-3"
+                    className="mb-3 px-3"
                     alt=""
-                    style={{   width: '291px !',
-
-                      height: '163px',
-                      borderRadius: '10px',}}
+                 
+                   
                 
                   />
                   <h3 className="text-start   mb-3 mt-4 flex items-center gap-2">
                   <span><img src={Blog} alt="" /></span>
                     {items.heading}
                   </h3>
-                  <h4 className="text-start  mx-5 ">
+                  <h4 className="text-start  mx-5 mb-3">
                  {items.subheading}
                   </h4>
                   <h5 className="text-start  mx-5 mb-3">{items.coupon}</h5>
