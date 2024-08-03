@@ -48,7 +48,7 @@ const SliderContainer = () => {
     <Slider {...settings} >
     {slideData.map(slide => (
         <div key={slide.id}>
-            <div className="lg:grid-cols-10 "  style={{maxWidth:'1225px',margin:'0 auto'}}>
+            <div className="lg:grid-cols-10 "  style={{maxWidth:'1225px',margin:'0 auto',height:'450px'}}>
           <img src={slide.imageUrl} className='img-fluid' alt={`Slide ${slide.id}`} style={{maxWidth:'100%',width:'100%',height:'450px',borderRadius: '20px'}}/>
           </div>
         </div>

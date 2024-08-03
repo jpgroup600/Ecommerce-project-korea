@@ -10,7 +10,7 @@ const Footer = () => {
               <h1>LOGO</h1>
             </div>
             <div className="footer-sec">
-              <h3 style={{ position: "relative",left:'30px' }}>
+              <h3 style={{ position: "relative",left:'50px' }}>
                 {" "}
                 <span style={{ position: "absolute",top:'4px' }}>
                   {" "}
@@ -28,7 +28,7 @@ const Footer = () => {
               </h3>
             </div>
             <div className="footer-sec">
-            <h3 style={{ position: "relative" ,left:'70px'}}>
+            <h3 style={{ position: "relative" ,left:'120px'}}>
                 {" "}
                 <span style={{ position: "absolute",top:'4px' }}>
                   {" "}
@@ -46,7 +46,7 @@ const Footer = () => {
               </h3>
             </div>
             <div className="footer-sec" >
-            <h3 style={{ position: "relative",left:'50px' }}>
+            <h3 style={{ position: "relative",left:'80px' }}>
                 {" "}
                 <span style={{ position: "absolute",top:'4px' }}>
                   {" "}
@@ -64,7 +64,7 @@ const Footer = () => {
               </h3>
             </div>
             <div className="footer-sec" >
-            <h3 style={{ position: "relative", left:'40px'}}>
+            <h3 style={{ position: "relative", left:'60px'}}>
                 {" "}
                 <span style={{ position: "absolute",top:'4px' }}>
                   {" "}

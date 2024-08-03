@@ -310,13 +310,13 @@ h3 {
   background-color: #343434;
 
   .slick-initialized{
-    max-width: 1250px;
+    max-width: 1225px;
     margin: 0 auto;
   }
 
   .slider-2-heading {
     padding-top: 32px;
-     max-width: 1250px;
+     max-width: 1225px;
     margin: 0 auto;
     h2 {
       font-family: $Noto;
@@ -329,7 +329,7 @@ h3 {
   }
   .slider-2-time {
     margin: 0 auto;
-     max-width: 1250px;
+     max-width: 1225px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -431,7 +431,7 @@ footer {
   .footer-container {
     width: 100%;
     max-width: 1118px;
-
+    margin: 0 auto;
     .footer-logo {
 
       padding-top: 80px;
@@ -454,6 +454,7 @@ footer {
         line-height: 23.17px;
         text-align: left;
         color: $white;
+        white-space: nowrap;
 
 
         &:before {
@@ -477,11 +478,13 @@ footer {
         line-height: 20.27px;
         text-align: left;
         color: $white;
-      }
+        white-space: nowrap;
+  }
     }
     .third{
+   
       white-space: nowrap;
-      margin-left: -160px;
+      margin-left: -180px;
       margin-top: 20px;
     }
 
@@ -493,7 +496,7 @@ font-size: 14px;
 font-weight: 400;
 line-height: 20.27px;
 text-align: center;
-margin-left: -280px;
+margin-left: -370px;
 color: $white;
 
     }
@@ -505,6 +508,7 @@ color: $white;
 
 
 @media (max-width:1920px) {
+
 
 .slick-prev{
     left: 80%;
