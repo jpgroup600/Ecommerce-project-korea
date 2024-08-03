@@ -105,8 +105,9 @@ const Slider2 = () => {
         <Slider {...settings}>
     {slideData.map(slide => (
         <div key={slide.id} className='' >
-        
-          <img src={slide.imageUrl} className='lg:px-3  mb-2' alt={`Slide ${slide.id}`} />
+        <div className='lg:px-3  mb-2'>
+          <img src={slide.imageUrl}  alt={`Slide ${slide.id}`}  style={{borderRadius:'10px'}}/>
+          </div>
           <div className='px-3 slider-2-heading-bottom'>
             <img src={slide.Image} alt="" className='pb-3'/>
         <h3>{slide.title}</h3>
