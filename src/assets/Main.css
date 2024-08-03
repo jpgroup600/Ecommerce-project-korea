@@ -416,6 +416,9 @@ footer .copyright p {
   }
 }
 @media (max-width: 1920px) {
+  .xl-card {
+    max-width: 1280px !important;
+  }
   .slider .slick-next {
     right: 150px !important;
     z-index: 9999;
