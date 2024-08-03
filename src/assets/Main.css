@@ -412,6 +412,55 @@ footer .copyright p {
     flex-direction: column;
   }
 }
+@media (max-width: 1920px) {
+  .slider .slick-next {
+    right: 80px !important;
+    z-index: 9999;
+  }
+  .slider .slick-next:before {
+    font-size: 35px !important;
+    background-color: transparent !important;
+    color: #ffffff !important;
+    background-color: black;
+  }
+  .slider .slick-prev {
+    left: 80px !important;
+    z-index: 9999;
+  }
+  .slider .slick-prev:before {
+    font-size: 35px !important;
+    background-color: transparent !important;
+    color: #ffffff !important;
+    background-color: black;
+  }
+  .slider .slick-dots {
+    bottom: 16px !important;
+  }
+  .slider .slick-dots button:before {
+    content: "";
+    height: 8px !important;
+    width: 8px !important;
+    background-color: #DAE1E7 !important;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: background-color 0.3s ease, width 0.3s ease, height 0.3s ease;
+  }
+  .slider .slick-dots > .slick-active button:before {
+    background-color: #2C9512 !important;
+    width: 24px !important;
+    height: 8px !important;
+    position: absolute;
+    color: transparent !important;
+    border-radius: 12px;
+    transition: background-color 0.3s ease, width 0.3s ease, height 0.3s ease;
+  }
+  .slider .slick-dots button:not(.slick-active):before {
+    transition: background-color 0.3s ease;
+  }
+}
 @media (max-width: 1023px) {
   .copyright p {
     margin-left: 0 !important;
