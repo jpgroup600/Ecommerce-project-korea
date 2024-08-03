@@ -155,12 +155,9 @@ margin: 0 auto;
   display: flex;
   justify-content: center; 
   align-items: center; 
-  max-width: 84px; 
-  min-height: 84px; 
-  
-  & > img {
-    width: 84px; 
-  }
+  width: 84px; 
+  height: 84px; 
+
 }
 
 h3 {
@@ -507,11 +504,13 @@ color: $white;
 
 
 
-// @media (max-width:1920px) {
-//   .slider-2{
-//     padding: 20px 300px;
-//   }
-// }
+@media (max-width:1920px) {
+
+.slick-prev{
+    left: 80%;
+  }
+
+}
 
 @media (max-width: 510px) {
   .slider-2-time {
@@ -523,7 +522,7 @@ color: $white;
 @media (max-width:1920px){
   .slider{
     .slick-next {
-  right: 80px !important;
+  right: 150px !important;
   z-index: 9999;
 
   &:before {
@@ -533,8 +532,9 @@ color: $white;
     background-color: black;
   }
 }
+
 .slick-prev {
-  left: 80px !important;
+  left: 150px !important;
   z-index: 9999;
 
   &:before {

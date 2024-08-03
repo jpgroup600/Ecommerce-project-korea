@@ -124,11 +124,8 @@ nav .Login {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 84px;
-  min-height: 84px;
-}
-.card-container .small-card > img {
   width: 84px;
+  height: 84px;
 }
 .card-container h3 {
   padding-top: 10px;
@@ -408,6 +405,11 @@ footer .copyright p {
   color: #ffffff;
 }
 
+@media (max-width: 1920px) {
+  .slick-prev {
+    left: 80%;
+  }
+}
 @media (max-width: 510px) {
   .slider-2-time {
     flex-direction: column;
@@ -415,7 +417,7 @@ footer .copyright p {
 }
 @media (max-width: 1920px) {
   .slider .slick-next {
-    right: 80px !important;
+    right: 150px !important;
     z-index: 9999;
   }
   .slider .slick-next:before {
@@ -425,7 +427,7 @@ footer .copyright p {
     background-color: black;
   }
   .slider .slick-prev {
-    left: 80px !important;
+    left: 150px !important;
     z-index: 9999;
   }
   .slider .slick-prev:before {
