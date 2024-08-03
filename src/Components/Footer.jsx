@@ -90,14 +90,14 @@ const Footer = () => {
               <p>사업자번호  000-00-00000</p>
              </div>
                <div className="footer-para-2">
-              <p>Tel 00-000-0000</p>
+              <p style={{textAlign:'right'}}>Tel 00-000-0000</p>
              </div>
                <div className="footer-para-2">
-              <p>Fax 00-000-0000</p>
+              <p  style={{textAlign:'right'}}>Fax 00-000-0000</p>
              </div>
   
              <div className="footer-para-2">
-              <p>E-mail 00-000-0000</p>
+              <p  style={{textAlign:'right'}}>E-mail 00-000-0000</p>
              </div>
              <br  className="lg:block hidden"/>
              <div className="footer-para-2">
@@ -108,7 +108,7 @@ const Footer = () => {
 
              </div>
              <div className="copyright">
-              <p className="third text-center mt-3">Copyright(c) 2023~A2P.com All right Reserved.</p>
+              <p className="third text-center ">Copyright(c) 2023~A2P.com All right Reserved.</p>
              </div>
           </div>
       </footer>
