@@ -23,7 +23,7 @@ const Category = () => {
               <>
             
         <div className="category-card-section mx-auto pt-6 ">
-                <div className="lg:px-2">
+                <div className="lg:px-2 2xl:px-0">
                   <img src={items.image} alt="" className="mb-3" style={{borderRadius:'10px',width:'291px',height:'163px'}}/>
                 </div>
               <div className="mx-3">

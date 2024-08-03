@@ -108,7 +108,7 @@ const Slider2 = () => {
         <div className='lg:px-3  mb-2'>
           <img src={slide.imageUrl}  alt={`Slide ${slide.id}`}  style={{borderRadius:'10px'}}/>
           </div>
-          <div className='px-3 slider-2-heading-bottom'>
+          <div className='lg:px-3 2xl:px-0 slider-2-heading-bottom'>
             <img src={slide.Image} alt="" className='pb-3'/>
         <h3>{slide.title}</h3>
         <h4>{slide.name}</h4>
