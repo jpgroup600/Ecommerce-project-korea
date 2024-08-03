@@ -58,7 +58,6 @@ nav .Login {
 }
 
 .slider {
-  max-width: 1225px;
   margin: 0 auto;
 }
 .slider .px-12 {
@@ -116,7 +115,6 @@ nav .Login {
   text-align: center;
   margin-bottom: 20px;
   padding-top: 20px;
-  max-width: 1225px;
   width: 100%;
 }
 .card-container .small-card {
@@ -165,12 +163,6 @@ nav .Login {
   color: #000000;
 }
 
-.category-card-section > img {
-  width: 291px;
-  height: 163px;
-  border-radius: 10px;
-  margin: 0 auto;
-}
 .category-card-section h3 {
   font-family: "Noto Sans KR" Sans KR;
   font-size: 14px;
@@ -197,7 +189,6 @@ nav .Login {
 }
 
 .slider {
-  max-width: 1225px;
   height: 423px;
 }
 .slider .slick-prev, .slider .slick-next {
@@ -234,8 +225,6 @@ nav .Login {
 .event-banner {
   background-color: #D9D9D9;
   height: 168px;
-  max-width: 1225px;
-  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -257,12 +246,10 @@ nav .Login {
   background-color: #343434;
 }
 .slider-2 .slick-initialized {
-  max-width: 1225px;
   margin: 0 auto;
 }
 .slider-2 .slider-2-heading {
   padding-top: 32px;
-  max-width: 1225px;
   margin: 0 auto;
 }
 .slider-2 .slider-2-heading h2 {
@@ -275,8 +262,6 @@ nav .Login {
 }
 .slider-2 .slider-2-time {
   margin: 0 auto;
-  max-width: 1225px;
-  padding-top: 13px;
   display: flex;
   align-items: center;
   justify-content: space-between;

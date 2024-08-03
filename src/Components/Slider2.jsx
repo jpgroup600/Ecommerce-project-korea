@@ -93,7 +93,7 @@ const Slider2 = () => {
       ];
   return (
     <>
-    <div className="slider-container mx-auto slider-2 container-fluid  ">
+    <div className="slider-container mx-auto  slider-2 container-fluid  ">
     <div className="slider-2-heading ">
         <h2>Remaining time for open</h2>
     </div>
@@ -106,9 +106,9 @@ const Slider2 = () => {
     {slideData.map(slide => (
         <div key={slide.id} className='' >
         
-          <img src={slide.imageUrl} className='lg:px-3  mb-2' alt={`Slide ${slide.id}`} style={{width:'291px',height:'163px',borderRadius:'10px'}} />
+          <img src={slide.imageUrl} className='lg:px-3  mb-2' alt={`Slide ${slide.id}`} />
           <div className='px-3 slider-2-heading-bottom'>
-            <img src={slide.Image} alt="" className='pb-3' style={{borderRadius:'10px'}}/>
+            <img src={slide.Image} alt="" className='pb-3'/>
         <h3>{slide.title}</h3>
         <h4>{slide.name}</h4>
           </div>
