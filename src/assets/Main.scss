@@ -244,7 +244,7 @@ h3 {
 // slider
 .slider {
    
-  height: 423px;
+  height: 425px !important;
   .slick-prev, .slick-next {
     position: absolute;
     top: 50%; 
@@ -288,8 +288,8 @@ h3 {
 .event-banner {
   background-color: $smallcard;
   height: 168px;
-//   ;
-//  margin: 0 auto;
+  max-width:1250px;
+ margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -310,14 +310,15 @@ h3 {
   padding: 20px 140px ;
   min-height: 420px;
   background-color: #343434;
-  .slick-initialized{
 
+  .slick-initialized{
+    max-width: 1250px;
     margin: 0 auto;
   }
 
   .slider-2-heading {
     padding-top: 32px;
-     ;
+     max-width: 1250px;
     margin: 0 auto;
     h2 {
       font-family: $Noto;
@@ -330,7 +331,7 @@ h3 {
   }
   .slider-2-time {
     margin: 0 auto;
-     ;
+     max-width: 1250px;
     display: flex;
     align-items: center;
     justify-content: space-between;
