@@ -9,8 +9,7 @@
 nav {
   padding: 0 35px;
   background-color: 2px solid $lighWhite;
-  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   .logo {
     span {
       font-family: $Noto;
@@ -44,18 +43,40 @@ nav {
     }
   }
   .Login {
+    margin-top: 5px;
     padding: 8px;
-    background-color: $green;
-    font-family: $Noto;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 23.17px;
+    background-color: $green; 
+    font-family: $Noto; 
+    font-size: 16px; 
+    font-weight: 700; 
+    line-height: 23.17px; 
     text-align: left;
-    color: $white !important;
+    border-radius: 5px; 
+    color: $white !important; 
+    height: 30px;
+    max-width: 70px; 
+    border: none; 
+    cursor: pointer; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+    
+
   }
+  
 }
 
+
 // slider
+
+.slider{
+ 
+margin: 0 auto;
+.px-12{
+  padding: 0 7rem !important;
+}
+
 
 .slick-next {
   right: 80px !important;
@@ -71,7 +92,7 @@ nav {
 .slick-prev {
   left: 80px !important;
   z-index: 9999;
-  background-color: red;
+
   &:before {
     font-size: 35px !important;
     background-color: transparent !important;
@@ -81,43 +102,74 @@ nav {
 }
 .slick-dots {
   bottom: 16px !important;
-
+  // color: red  !important;
+  
   button {
     &:before {
+      content: ''; 
       height: 8px !important;
       width: 8px !important;
-      color: $sliderClor !important;
+      background-color: $sliderClor !important; 
+      border-radius: 50%;
+      position: absolute;
+      top: 50%; 
+      left: 50%; 
+      transform: translate(-50%, -50%); 
+      transition: background-color 0.3s ease, width 0.3s ease, height 0.3s ease; 
     }
   }
+
   & > .slick-active {
-    background-color: $green !important;
-    border-radius: 12px;
-    width: 24px;
-    padding: 0 24px;
+    button:before {
+      background-color: $green !important; 
+      width: 24px !important;
+      height: 8px !important;
+      position: absolute;
+      color: transparent !important;
+      border-radius: 12px; 
+      transition: background-color 0.3s ease, width 0.3s ease, height 0.3s ease;
+    }
   }
+
+  button {
+ 
+    &:not(.slick-active):before {
+      transition: background-color 0.3s ease; 
+    }
+  }
+}
 }
 
-// small Card
+
+.card-container {
+  text-align: center; 
+  margin-bottom: 20px;
+  padding-top: 20px;
+   ;
+  width: 100%;
+
 .small-card {
-  margin-top: 20px;
-  border: 2px solid $smallcard;
+  margin: 0 auto; 
+  border: 2px solid $smallcard; 
   border-radius: 20px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 84px;
-  min-height: 84px;
-  & > img {
-    width: 84px;
-  }
+  justify-content: center; 
+  align-items: center; 
+  width: 84px; 
+  height: 84px; 
+
 }
+
 h3 {
-  font-family: $Noto;
-  font-size: 12px;
+  padding-top: 10px;
+  font-family: $Noto; 
+  font-size: 12px; 
   font-weight: 400;
-  line-height: 17.38px;
-  text-align: center;
-  color: #000000;
+  line-height: 17.38px; 
+  text-align: center; 
+  color: #000000; 
+}
+
 }
 
 // cateory
@@ -135,10 +187,12 @@ h3 {
   }
   .category-btn {
     a {
+      width: 39px;
+      height: 20px;
       box-shadow: 0 1px 4px 0 #00000033;
       width: 75px;
       height: 30px;
-      padding: 0px 20px;
+      padding: 0px 8px;
       font-family: $Noto;
       font-size: 14px;
       font-weight: 400;
@@ -149,28 +203,30 @@ h3 {
   }
 }
 .category-card-section {
-  & > img {
-    // max-width: 291px;
-    width: 291px;
+  // & > img {
+  // width: 291px;
+  //   // width: 291px;
 
-    height: 163px;
-    border-radius: 10px;
-    margin: 0 auto;
-  }
+  //   height: 163px;
+  //   border-radius: 10px;
+  //   margin: 0 auto;
+  // }
   h3 {
-    font-family: $Noto;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 20.27px;
-    text-align: left;
-  }
-  h4 {
-    font-family: $Noto;
+    font-family: $Noto Sans KR;
     font-size: 14px;
     font-weight: 700;
     line-height: 20.27px;
     text-align: left;
     color: #000000;
+  }
+  h4 {
+    font-family: $Noto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23.17px;
+    text-align: left;
+    color: #000000;
+    
   }
   h5 {
     font-family: $Noto;
@@ -184,8 +240,44 @@ h3 {
 
 // slider
 .slider {
-  max-width: 1225px;
-  height: 423px;
+   
+  height: 425px !important;
+  .slick-prev, .slick-next {
+    position: absolute;
+    top: 50%; 
+    transform: translateY(-0%); 
+    width: 40px;
+    height: 40px; 
+    background-size: 20px 20px; 
+    background-repeat: no-repeat;
+    background-position: center; 
+    border: none; 
+    cursor: pointer; 
+    z-index: 1000; 
+    transition:0.3s ease;
+   
+  }
+  .slick-prev {
+    left: 25px !important; 
+    background-image: url('../assets/images/Right.svg'); 
+    &::before{
+      font-family: Arial, Helvetica, sans-serif !important;
+      content: " " !important;
+    }
+    
+    
+  }
+  
+  // Styling for Next Arrow
+  .slick-next {
+    right: 30px !important; 
+    background-image: url('../assets/images/Left.svg'); 
+    &::before{
+      content: " " !important;
+      font-family: Arial, Helvetica, sans-serif !important;
+    }
+    
+  }
 }
 
 // event banner
@@ -193,8 +285,9 @@ h3 {
 .event-banner {
   background-color: $smallcard;
   height: 168px;
-  max-width: 1224px;
+  max-width:1224px;
   width: 100%;
+ margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -212,10 +305,19 @@ h3 {
 }
 
 .slider-2 {
+  padding: 20px 140px ;
   min-height: 420px;
   background-color: #343434;
+
+  .slick-initialized{
+    max-width: 1225px;
+    margin: 0 auto;
+  }
+
   .slider-2-heading {
     padding-top: 32px;
+     max-width: 1225px;
+    margin: 0 auto;
     h2 {
       font-family: $Noto;
       font-size: 22px;
@@ -226,7 +328,8 @@ h3 {
     }
   }
   .slider-2-time {
-    padding-top: 13px;
+    margin: 0 auto;
+     max-width: 1225px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -248,6 +351,77 @@ h3 {
       color: $white;
     }
   }
+
+  .slider-2-heading-bottom{
+    h3{
+      font-family: $Noto;
+font-size: 16px;
+font-weight: 400;
+line-height: 23.17px;
+text-align: left;
+color: $white;
+
+    }
+    h4{
+      font-family: $Noto;
+font-size: 14px;
+font-weight: 400;
+line-height: 20.27px;
+text-align: left;
+color: $white;
+
+    }
+  }
+
+.slick-prev, .slick-next {
+  position: absolute;
+  top: 30%; 
+  transform: translateY(-50%); 
+  width: 40px;
+  height: 40px; 
+  background-size: 20px 20px; 
+  background-repeat: no-repeat;
+  background-position: center; 
+  border: none; 
+  cursor: pointer; 
+  z-index: 1000; 
+  transition:0.3s ease;
+
+ 
+}
+
+.slick-prev {
+  left: -50px !important; 
+  background-image: url('../assets/images/Right.svg'); 
+  &::before{
+    font-family: Arial, Helvetica, sans-serif !important;
+    content: " " !important;
+  }
+  &:hover{
+    background:url('../assets/images/Right.svg');  
+    background-repeat: no-repeat;
+ 
+    }
+  
+  
+}
+
+// Styling for Next Arrow
+.slick-next {
+  right: -50px !important; 
+  background-image: url('../assets/images/Left.svg'); 
+  &::before{
+    content: " " !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+  }
+  &:hover{
+    
+    background: url('../assets/images/Left.svg') !important;  
+    background-repeat: no-repeat !important;
+  }
+  
+}
+
 }
 
 // footer
@@ -257,7 +431,7 @@ footer {
   .footer-container {
     width: 100%;
     max-width: 1118px;
-
+    margin: 0 auto;
     .footer-logo {
 
       padding-top: 80px;
@@ -280,6 +454,7 @@ footer {
         line-height: 23.17px;
         text-align: left;
         color: $white;
+        white-space: nowrap;
 
 
         &:before {
@@ -303,27 +478,43 @@ footer {
         line-height: 20.27px;
         text-align: left;
         color: $white;
-      }
+        white-space: nowrap;
+  }
     }
     .third{
+   
       white-space: nowrap;
-      margin-left: -160px;
+      margin-left: -180px;
       margin-top: 20px;
     }
 
   }
   .copyright{
     p{
+      margin-top: -20px;
       font-family: $Noto;
 font-size: 14px;
 font-weight: 400;
 line-height: 20.27px;
 text-align: center;
-margin-left: -280px;
+margin-left: -365px;
 color: $white;
 
     }
   }
+}
+
+
+
+
+
+@media (max-width:1920px) {
+
+
+.slick-prev{
+    left: 80%;
+  }
+
 }
 
 @media (max-width: 510px) {
@@ -332,6 +523,75 @@ color: $white;
   }
 }
 
+
+@media (max-width:1920px){
+  .xl-card{
+    max-width: 1280px !important;
+  }
+  .slider{
+    .slick-next {
+  right: 150px !important;
+  z-index: 9999;
+
+  &:before {
+    font-size: 35px !important;
+    background-color: transparent !important;
+    color: $white !important;
+    background-color: black;
+  }
+}
+
+.slick-prev {
+  left: 150px !important;
+  z-index: 9999;
+
+  &:before {
+    font-size: 35px !important;
+    background-color: transparent !important;
+    color: $white !important;
+    background-color: black;
+  }
+}
+.slick-dots {
+  bottom: 16px !important;
+  // color: red  !important;
+  
+  button {
+    &:before {
+      content: ''; 
+      height: 8px !important;
+      width: 8px !important;
+      background-color: $sliderClor !important; 
+      border-radius: 50%;
+      position: absolute;
+      top: 50%; 
+      left: 50%; 
+      transform: translate(-50%, -50%); 
+      transition: background-color 0.3s ease, width 0.3s ease, height 0.3s ease; 
+    }
+  }
+
+  & > .slick-active {
+    button:before {
+      background-color: $green !important; 
+      width: 24px !important;
+      height: 8px !important;
+      position: absolute;
+      color: transparent !important;
+      border-radius: 12px; 
+      transition: background-color 0.3s ease, width 0.3s ease, height 0.3s ease;
+    }
+  }
+
+  button {
+ 
+    &:not(.slick-active):before {
+      transition: background-color 0.3s ease; 
+    }
+  }
+}
+  }
+}
 
 
 @media (max-width:1023px){

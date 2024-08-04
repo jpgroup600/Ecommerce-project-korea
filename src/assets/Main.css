@@ -8,7 +8,7 @@
 nav {
   padding: 0 35px;
   background-color: 2px solid #F5F3F3;
-  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 nav .logo span {
   font-family: "Noto Sans KR";
@@ -37,6 +37,7 @@ nav .nav-links a {
   color: #6D6D6D;
 }
 nav .Login {
+  margin-top: 5px;
   padding: 8px;
   background-color: #2C9512;
   font-family: "Noto Sans KR";
@@ -44,62 +45,90 @@ nav .Login {
   font-weight: 700;
   line-height: 23.17px;
   text-align: left;
+  border-radius: 5px;
   color: #ffffff !important;
+  height: 30px;
+  max-width: 70px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.slick-next {
+.slider {
+  margin: 0 auto;
+}
+.slider .px-12 {
+  padding: 0 7rem !important;
+}
+.slider .slick-next {
   right: 80px !important;
   z-index: 9999;
 }
-.slick-next:before {
+.slider .slick-next:before {
   font-size: 35px !important;
   background-color: transparent !important;
   color: #ffffff !important;
   background-color: black;
 }
-
-.slick-prev {
+.slider .slick-prev {
   left: 80px !important;
   z-index: 9999;
-  background-color: red;
 }
-.slick-prev:before {
+.slider .slick-prev:before {
   font-size: 35px !important;
   background-color: transparent !important;
   color: #ffffff !important;
   background-color: black;
 }
-
-.slick-dots {
+.slider .slick-dots {
   bottom: 16px !important;
 }
-.slick-dots button:before {
+.slider .slick-dots button:before {
+  content: "";
   height: 8px !important;
   width: 8px !important;
-  color: #DAE1E7 !important;
+  background-color: #DAE1E7 !important;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: background-color 0.3s ease, width 0.3s ease, height 0.3s ease;
 }
-.slick-dots > .slick-active {
+.slider .slick-dots > .slick-active button:before {
   background-color: #2C9512 !important;
+  width: 24px !important;
+  height: 8px !important;
+  position: absolute;
+  color: transparent !important;
   border-radius: 12px;
-  width: 24px;
-  padding: 0 24px;
+  transition: background-color 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+.slider .slick-dots button:not(.slick-active):before {
+  transition: background-color 0.3s ease;
 }
 
-.small-card {
-  margin-top: 20px;
+.card-container {
+  text-align: center;
+  margin-bottom: 20px;
+  padding-top: 20px;
+  width: 100%;
+}
+.card-container .small-card {
+  margin: 0 auto;
   border: 2px solid #D9D9D9;
   border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 84px;
-  min-height: 84px;
-}
-.small-card > img {
   width: 84px;
+  height: 84px;
 }
-
-h3 {
+.card-container h3 {
+  padding-top: 10px;
   font-family: "Noto Sans KR";
   font-size: 12px;
   font-weight: 400;
@@ -117,10 +146,12 @@ h3 {
   color: #2C9512;
 }
 .category-section .category-btn a {
+  width: 39px;
+  height: 20px;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
   width: 75px;
   height: 30px;
-  padding: 0px 20px;
+  padding: 0px 8px;
   font-family: "Noto Sans KR";
   font-size: 14px;
   font-weight: 400;
@@ -129,30 +160,25 @@ h3 {
   color: #000000;
 }
 
-.category-card-section > img {
-  width: 291px;
-  height: 163px;
-  border-radius: 10px;
-  margin: 0 auto;
-}
 .category-card-section h3 {
-  font-family: "Noto Sans KR";
+  font-family: "Noto Sans KR" Sans KR;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 20.27px;
   text-align: left;
+  color: #000000;
 }
 .category-card-section h4 {
   font-family: "Noto Sans KR";
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 20.27px;
+  line-height: 23.17px;
   text-align: left;
   color: #000000;
 }
 .category-card-section h5 {
   font-family: "Noto Sans KR";
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 20.27px;
   text-align: left;
@@ -160,8 +186,37 @@ h3 {
 }
 
 .slider {
-  max-width: 1225px;
-  height: 423px;
+  height: 425px !important;
+}
+.slider .slick-prev, .slider .slick-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(0%);
+  width: 40px;
+  height: 40px;
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+  transition: 0.3s ease;
+}
+.slider .slick-prev {
+  left: 25px !important;
+  background-image: url("../assets/images/Right.svg");
+}
+.slider .slick-prev::before {
+  font-family: Arial, Helvetica, sans-serif !important;
+  content: " " !important;
+}
+.slider .slick-next {
+  right: 30px !important;
+  background-image: url("../assets/images/Left.svg");
+}
+.slider .slick-next::before {
+  content: " " !important;
+  font-family: Arial, Helvetica, sans-serif !important;
 }
 
 .event-banner {
@@ -169,6 +224,7 @@ h3 {
   height: 168px;
   max-width: 1224px;
   width: 100%;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -185,11 +241,18 @@ h3 {
 }
 
 .slider-2 {
+  padding: 20px 140px;
   min-height: 420px;
   background-color: #343434;
 }
+.slider-2 .slick-initialized {
+  max-width: 1225px;
+  margin: 0 auto;
+}
 .slider-2 .slider-2-heading {
   padding-top: 32px;
+  max-width: 1225px;
+  margin: 0 auto;
 }
 .slider-2 .slider-2-heading h2 {
   font-family: "Noto Sans KR";
@@ -200,7 +263,8 @@ h3 {
   color: #ffffff;
 }
 .slider-2 .slider-2-time {
-  padding-top: 13px;
+  margin: 0 auto;
+  max-width: 1225px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -222,6 +286,60 @@ h3 {
   text-align: left;
   color: #ffffff;
 }
+.slider-2 .slider-2-heading-bottom h3 {
+  font-family: "Noto Sans KR";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23.17px;
+  text-align: left;
+  color: #ffffff;
+}
+.slider-2 .slider-2-heading-bottom h4 {
+  font-family: "Noto Sans KR";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20.27px;
+  text-align: left;
+  color: #ffffff;
+}
+.slider-2 .slick-prev, .slider-2 .slick-next {
+  position: absolute;
+  top: 30%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+  transition: 0.3s ease;
+}
+.slider-2 .slick-prev {
+  left: -50px !important;
+  background-image: url("../assets/images/Right.svg");
+}
+.slider-2 .slick-prev::before {
+  font-family: Arial, Helvetica, sans-serif !important;
+  content: " " !important;
+}
+.slider-2 .slick-prev:hover {
+  background: url("../assets/images/Right.svg");
+  background-repeat: no-repeat;
+}
+.slider-2 .slick-next {
+  right: -50px !important;
+  background-image: url("../assets/images/Left.svg");
+}
+.slider-2 .slick-next::before {
+  content: " " !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+.slider-2 .slick-next:hover {
+  background: url("../assets/images/Left.svg") !important;
+  background-repeat: no-repeat !important;
+}
 
 footer {
   background-color: #9E9E9E;
@@ -230,6 +348,7 @@ footer {
 footer .footer-container {
   width: 100%;
   max-width: 1118px;
+  margin: 0 auto;
 }
 footer .footer-container .footer-logo {
   padding-top: 80px;
@@ -253,6 +372,7 @@ footer .footer-container .footer-sec h3 {
   line-height: 23.17px;
   text-align: left;
   color: #ffffff;
+  white-space: nowrap;
 }
 footer .footer-container .footer-sec h3:before {
   content: "";
@@ -271,25 +391,84 @@ footer .footer-container .footer-para-2 p {
   line-height: 20.27px;
   text-align: left;
   color: #ffffff;
+  white-space: nowrap;
 }
 footer .footer-container .third {
   white-space: nowrap;
-  margin-left: -160px;
+  margin-left: -180px;
   margin-top: 20px;
 }
 footer .copyright p {
+  margin-top: -20px;
   font-family: "Noto Sans KR";
   font-size: 14px;
   font-weight: 400;
   line-height: 20.27px;
   text-align: center;
-  margin-left: -280px;
+  margin-left: -365px;
   color: #ffffff;
 }
 
+@media (max-width: 1920px) {
+  .slick-prev {
+    left: 80%;
+  }
+}
 @media (max-width: 510px) {
   .slider-2-time {
     flex-direction: column;
+  }
+}
+@media (max-width: 1920px) {
+  .xl-card {
+    max-width: 1280px !important;
+  }
+  .slider .slick-next {
+    right: 150px !important;
+    z-index: 9999;
+  }
+  .slider .slick-next:before {
+    font-size: 35px !important;
+    background-color: transparent !important;
+    color: #ffffff !important;
+    background-color: black;
+  }
+  .slider .slick-prev {
+    left: 150px !important;
+    z-index: 9999;
+  }
+  .slider .slick-prev:before {
+    font-size: 35px !important;
+    background-color: transparent !important;
+    color: #ffffff !important;
+    background-color: black;
+  }
+  .slider .slick-dots {
+    bottom: 16px !important;
+  }
+  .slider .slick-dots button:before {
+    content: "";
+    height: 8px !important;
+    width: 8px !important;
+    background-color: #DAE1E7 !important;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: background-color 0.3s ease, width 0.3s ease, height 0.3s ease;
+  }
+  .slider .slick-dots > .slick-active button:before {
+    background-color: #2C9512 !important;
+    width: 24px !important;
+    height: 8px !important;
+    position: absolute;
+    color: transparent !important;
+    border-radius: 12px;
+    transition: background-color 0.3s ease, width 0.3s ease, height 0.3s ease;
+  }
+  .slider .slick-dots button:not(.slick-active):before {
+    transition: background-color 0.3s ease;
   }
 }
 @media (max-width: 1023px) {

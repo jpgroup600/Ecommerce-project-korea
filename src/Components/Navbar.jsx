@@ -9,7 +9,7 @@ const Navbar = () => {
   };
   return (
     <>
-      <nav>
+      <nav className="2xl:px-12">
         <div className="container mx-auto">
         <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
           <div className="relative flex h-16 items-center justify-between">
@@ -88,7 +88,7 @@ const Navbar = () => {
                 </a>
                 <a
                   href="#"
-                  className="rounded-md px-3 py-2 text-sm font-medium Login"
+                  className="  font-medium Login"
                 >
                   Login
                 </a>
