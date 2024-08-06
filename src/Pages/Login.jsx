@@ -68,7 +68,7 @@ const Login = () => {
       </div>
 
 
-  {/* Reviewers  Register */}
+  {/* Reviewers Register */}
 
   <div className="review-bottom flex gap-3">
     <div className="review-section-one gap-4 flex items-center justify-center">
@@ -84,9 +84,23 @@ const Login = () => {
 
   </div>
 
+    <div className="how-to-use mx-auto">
+      
+    <ul className='flex gap-6 mt-4'>
+      <li>About us</li>
+      <li>Become Merchant</li>
+      <li>How to use</li>
+      <li>Privacy policy</li>
+    </ul>
+    </div>
+
 
       </div>
+
+
     </div>
+
+ 
   </div>
     </>
   )
