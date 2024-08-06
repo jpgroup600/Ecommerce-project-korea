@@ -567,7 +567,7 @@ footer .copyright p {
 .login-form .how-to-use {
   margin-top: 80px;
   height: 80px;
-  border-top: 1px solid #9E9E9E;
+  border-top: 1px solid #9e9e9e;
   width: 1220px !important;
   margin: 150px auto 80px -450px;
 }
@@ -597,6 +597,153 @@ footer .copyright p {
   line-height: 33.89px;
   text-align: left;
   color: #000000;
+}
+
+.basic-campian-section {
+  padding: 50px;
+  max-width: 1220px;
+  margin: 0 auto;
+}
+.basic-campian-section .basic-setting {
+  padding-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.basic-campian-section .basic-setting h2 {
+  font-family: "Noto Sans KR";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28.96px;
+  text-align: left;
+  color: #2C9512;
+}
+.basic-campian-section .basic-setting .bring-prev {
+  width: 236px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: #2C9512;
+  font-family: "Noto Sans KR";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23.17px;
+  text-align: center;
+  color: #ffffff;
+}
+.basic-campian-section .basic-setting .reset {
+  width: 130px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: #2C9512;
+  font-family: "Noto Sans KR";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23.17px;
+  text-align: center;
+  color: #ffffff;
+}
+.basic-campian-section .basic-setting-main-page {
+  margin-top: 40px !important;
+  max-width: 1220px;
+  margin: 0 auto;
+  background-color: #f5f3f3;
+  height: 2262px;
+  padding: 60px 50px;
+}
+.basic-campian-section .basic-setting-main-page .basic-setting-one {
+  padding-top: 10px;
+}
+.basic-campian-section .basic-setting-main-page .basic-setting-one .one {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #2c9512;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.basic-campian-section .basic-setting-main-page .basic-setting-one .one > span {
+  font-family: "Noto Sans KR";
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 23.17px;
+  text-align: center;
+  color: #2C9512;
+}
+.basic-campian-section .basic-setting-main-page .basic-setting-headin h1 {
+  font-family: "Noto Sans KR";
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 31.86px;
+  text-align: left;
+  color: #000000;
+}
+.basic-campian-section .basic-setting-main-page .last-basic {
+  width: 36px;
+  height: 20px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+.basic-campian-section .basic-setting-main-page .last-basic p {
+  margin: 0 auto;
+  font-family: "Noto Sans KR";
+  font-size: 10px;
+  font-weight: 900;
+  line-height: 14.48px;
+  text-align: center;
+  color: red;
+}
+.basic-campian-section .basic-setting-main-page .form-data {
+  padding-top: 30px;
+}
+.basic-campian-section .basic-setting-main-page .form-data .form-input-group {
+  display: flex;
+  flex-direction: column;
+}
+.basic-campian-section .basic-setting-main-page .form-data .form-input-group label {
+  font-family: "Noto Sans KR";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23.17px;
+  text-align: left;
+  color: #000000;
+  margin-bottom: 12px;
+}
+.basic-campian-section .basic-setting-main-page .form-data .form-input-group input {
+  width: 1095px;
+  height: 50px;
+  border-radius: 5px;
+  padding: 0 15px;
+  font-family: "Noto Sans KR";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20.27px;
+  text-align: left;
+  margin-bottom: 14px;
+}
+.basic-campian-section .basic-setting-main-page .form-data .form-input-group input:focus {
+  outline: none;
+}
+.basic-campian-section .basic-setting-main-page .form-data .form-input-group textarea {
+  width: 1095px;
+  height: 238px;
+  border-radius: 5px;
+  padding: 0 15px;
+  font-family: "Noto Sans KR";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20.27px;
+  text-align: left;
+  margin-bottom: 14px;
+}
+.basic-campian-section .basic-setting-main-page .form-data .form-input-group textarea:focus {
+  outline: none;
+}
+.basic-campian-section .basic-setting-main-page .form-datas {
+  display: flex;
+  flex-direction: column;
 }
 
 @media (max-width: 1920px) {
