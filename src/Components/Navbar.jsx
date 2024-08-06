@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../assets/Main.css";
 import SearchIcon from "../assets/images/Search.svg"
+import { NavLink } from "react-router-dom";
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -86,12 +87,10 @@ const Navbar = () => {
                 >
                  How to use
                 </a>
-                <a
-                  href="#"
-                  className="  font-medium Login"
-                >
+                <NavLink to="login" className="  font-medium Login">
                   Login
-                </a>
+                  </NavLink>
+                 
               </div>
             </div>
           </div>
