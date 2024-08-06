@@ -580,6 +580,25 @@ footer .copyright p {
   color: #9e9e9e;
 }
 
+.capian-secation {
+  max-width: 1224px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 60px 0px 400px 0px;
+}
+.capian-secation .capion-heading {
+  padding-top: 20px;
+  margin-bottom: 35px;
+}
+.capian-secation .capion-heading h1 {
+  font-family: "Inter";
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 33.89px;
+  text-align: left;
+  color: #000000;
+}
+
 @media (max-width: 1920px) {
   .slick-prev {
     left: 80%;

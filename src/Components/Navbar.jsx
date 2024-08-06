@@ -81,12 +81,12 @@ const Navbar = () => {
                 >
                 Event/Notification
                 </a>
-                <a
-                  href="#"
+                <NavLink
+                  to="/campion"
                   className="rounded-md px-3 py-2 text-sm font-medium "
                 >
                  How to use
-                </a>
+                </NavLink>
                 <NavLink to="login" className="  font-medium Login">
                   Login
                   </NavLink>

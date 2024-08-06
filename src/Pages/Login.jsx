@@ -77,7 +77,7 @@ const Login = () => {
     </div>
 
     <div className="review-section-one gap-4 flex items-center justify-center">
-      <img src={Review} alt="" />
+      <img src={Merchant} alt="" />
       <p>Merchant <br />
       Register</p>
     </div>

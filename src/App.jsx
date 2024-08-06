@@ -6,6 +6,7 @@ import Footer from './Components/Footer'
 import Login from './Pages/Login'
 import Homepage from './Pages/Homepage'
 import { Route, Routes } from 'react-router-dom'
+import Campian from './Pages/Campian'
 
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
     <Routes>
       <Route path='/' element={<Homepage />}/>
       <Route path='/login' element={<Login />} />
+      <Route path='/campion' element={<Campian />} />
     </Routes>
 
     <Footer />
