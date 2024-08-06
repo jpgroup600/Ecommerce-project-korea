@@ -714,6 +714,7 @@ footer {
   .basic-setting-main-page {
     margin-top: 40px !important;
     max-width: 1220px;
+    border-radius: 10px;
     margin: 0 auto;
     background-color: #f5f3f3;
     height: 2262px;
@@ -798,7 +799,7 @@ footer {
           width: 1095px;
           height: 238px;
           border-radius: 5px;
-          padding: 0 15px;
+          padding: 15px;
           font-family: $Noto;
           font-size: 14px;
           font-weight: 400;
