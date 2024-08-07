@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 * {
@@ -671,6 +672,14 @@ footer .copyright p {
   text-align: center;
   color: #2C9512;
 }
+.basic-campian-section .basic-setting-main-page .basic-info-capian-type p {
+  font-family: "Noto Sans KR";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23.17px;
+  text-align: left;
+  color: #000000;
+}
 .basic-campian-section .basic-setting-main-page .basic-setting-headin h1 {
   font-family: "Noto Sans KR";
   font-size: 22px;
@@ -742,9 +751,277 @@ footer .copyright p {
 .basic-campian-section .basic-setting-main-page .form-data .form-input-group textarea:focus {
   outline: none;
 }
+.basic-campian-section .basic-setting-main-page .form-data .form-input-group .zero-input {
+  width: 514px;
+  height: 50px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+}
+.basic-campian-section .basic-setting-main-page .form-data .form-input-group .member-input {
+  width: 514px;
+  height: 50px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+}
+.basic-campian-section .basic-setting-main-page .form-data .form-input-group .member-input p {
+  font-family: "Noto Sans KR";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 23.17px;
+  text-align: left;
+  color: #000000;
+}
+.basic-campian-section .basic-setting-main-page .form-data .form-input-group span {
+  font-family: "Noto Sans KR";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20.27px;
+  text-align: left;
+  color: #9e9e9e;
+}
 .basic-campian-section .basic-setting-main-page .form-datas {
   display: flex;
   flex-direction: column;
+}
+.basic-campian-section .basic-setting-main-page .visti {
+  margin-top: 30px;
+  width: 536px;
+  height: 238px;
+  border: 3px solid #2C9512;
+  border-radius: 5px;
+  background-color: rgba(44, 149, 18, 0.3019607843);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.basic-campian-section .basic-setting-main-page .visti h4 {
+  font-family: "Noto Sans KR";
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 31.86px;
+  text-align: center;
+  color: #2C9512;
+}
+.basic-campian-section .basic-setting-main-page .visti p {
+  font-family: "Noto Sans KR";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23.17px;
+  text-align: center;
+  color: #000000;
+}
+.basic-campian-section .basic-setting-main-page .ship {
+  margin-top: 30px;
+  width: 536px;
+  height: 238px;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.basic-campian-section .basic-setting-main-page .ship h4 {
+  font-family: "Noto Sans KR";
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 31.86px;
+  text-align: center;
+  color: rgba(44, 149, 18, 0.5019607843);
+}
+.basic-campian-section .basic-setting-main-page .ship p {
+  font-family: "Noto Sans KR";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23.17px;
+  text-align: center;
+  color: #9E9E9E;
+}
+.basic-campian-section .basic-setting-main-page .drop {
+  margin-top: 80px;
+}
+.basic-campian-section .basic-setting-main-page .drop .Main-image p {
+  font-family: "Noto Sans KR";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23.17px;
+  text-align: left;
+  color: #000000;
+}
+.basic-campian-section .basic-setting-main-page .drop .drag-drop {
+  padding: 0 50px;
+  margin-top: 30px;
+  width: 1100px;
+  height: 237px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.basic-campian-section .basic-setting-main-page .drop .drag-drop .drag-drop-heading {
+  padding-left: 20px;
+}
+.basic-campian-section .basic-setting-main-page .drop .drag-drop .drag-drop-heading h2 {
+  font-family: "Noto Sans KR";
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 31.86px;
+  text-align: left;
+}
+.basic-campian-section .basic-setting-main-page .drop .drag-drop .drag-drop-heading p {
+  font-family: "Noto Sans KR";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23.17px;
+  text-align: left;
+  color: #9E9E9E;
+}
+.basic-campian-section .basic-setting-main-page .drop .drag-drop .upload {
+  border: 2px dotted #B2B2B2;
+  width: 234px;
+  height: 203px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.basic-campian-section .basic-setting-main-page .Adress_to_visit .address_to_visit_para {
+  padding-top: 30px;
+}
+.basic-campian-section .basic-setting-main-page .Adress_to_visit .address_to_visit_para p {
+  font-family: "Noto Sans KR";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23.17px;
+  text-align: left;
+  color: #000000;
+}
+.basic-campian-section .basic-setting-main-page .Adress_to_visit .address-one {
+  width: 1100px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.basic-campian-section .basic-setting-main-page .Adress_to_visit .address-one .주소설정 {
+  font-family: "Noto Sans KR";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20.27px;
+  text-align: left;
+  color: #9E9E9E;
+}
+.basic-campian-section .basic-setting-main-page .Adress_to_visit .address-one .주소검색 {
+  font-family: "Noto Sans KR";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20.27px;
+  text-align: left;
+  color: #000000;
+}
+.basic-campian-section .basic-setting-main-page .last-container {
+  width: 1100px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+.basic-campian-section .basic-setting-main-page .last-container p {
+  font-family: "Noto Sans KR";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20.27px;
+  text-align: left;
+  color: #9E9E9E;
+}
+.basic-campian-section .basic-setting-main-page .chanel-social {
+  padding-top: 30px;
+}
+.basic-campian-section .basic-setting-main-page .chanel-social p {
+  font-family: "Noto Sans KR";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23.17px;
+  text-align: left;
+  color: #000000;
+}
+.basic-campian-section .basic-setting-main-page .chanel-social .youtube {
+  width: 199px;
+  height: 50px;
+  background-color: rgba(44, 149, 18, 0.3019607843);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Noto Sans KR";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26.06px;
+  text-align: left;
+  color: #2C9512;
+}
+.basic-campian-section .basic-setting-main-page .chanel-social .insta {
+  width: 199px;
+  height: 50px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Noto Sans KR";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26.06px;
+  text-align: left;
+  color: #B2B2B2;
+}
+.basic-campian-section .bottom-btn-one {
+  width: 596px;
+  height: 80px;
+  border: 1px solid #B2B2B2;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.basic-campian-section .bottom-btn-one p {
+  font-family: "Noto Sans KR";
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 31.86px;
+  text-align: center;
+  color: #B2B2B2;
+}
+.basic-campian-section .bottom-btn-two {
+  width: 596px;
+  height: 80px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2C9512;
+}
+.basic-campian-section p {
+  font-family: "Noto Sans KR";
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 31.86px;
+  text-align: center;
+  color: #ffffff;
 }
 
 @media (max-width: 1920px) {

@@ -33,7 +33,7 @@ const Login = () => {
         <input type="text" placeholder='UserName'/>
       </div>
       <div className="form-group mt-2">
-        <input type="text" placeholder='Password'/>
+        <input type="password" placeholder='Password'/>
       </div>
       <a href="" className='login-btn'>Login</a>
     </form>
