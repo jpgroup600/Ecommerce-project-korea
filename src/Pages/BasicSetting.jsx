@@ -195,7 +195,7 @@ const BasicSetting = () => {
 
           </div>
         </div>
-        <div className="2xl:px-12  mt-5 mb-12" style={{paddingBottom:'90px'}}>
+        <div className="2xl:px-12  mt-10 mb-12" style={{paddingBottom:'90px'}}>
       <div className="grid lg:grid-cols-2 mb-12" >
         <div className="bottom-btn-one ">
           <p>캠페인 미리보기</p>
