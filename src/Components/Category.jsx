@@ -8,7 +8,7 @@ const Category = () => {
   return (
     <>
       <div className="container mx-auto mt-12 lg:px-12">
-        <div className="category-section 2xl:px-2 xl:px-6 lg:px-0 flex justify-between mb-5 2xl:mb-8 " style={{maxWidth:'1225px',margin:'0 auto'}} >
+        <div className="category-section 2xl:px-2 xl:px-2 lg:px-0 flex justify-between mb-5 2xl:mb-8 " style={{maxWidth:'1225px',margin:'0 auto'}} >
           <div className="category-heading" >
             <h3>Catagory</h3>
           </div>

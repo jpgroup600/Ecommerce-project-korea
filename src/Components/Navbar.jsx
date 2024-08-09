@@ -87,7 +87,7 @@ const Navbar = () => {
                 >
                  How to use
                 </NavLink>
-                <NavLink to="login" className="  font-medium Login">
+                <NavLink to="login" className="  font-medium Login w-100">
                   Login
                   </NavLink>
                  

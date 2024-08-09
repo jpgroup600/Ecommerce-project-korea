@@ -40,7 +40,7 @@ nav .nav-links a {
 }
 nav .Login {
   margin-top: 5px;
-  padding: 8px;
+  padding: 15px;
   background-color: #2C9512;
   font-family: "Noto Sans KR";
   font-size: 16px;
@@ -153,13 +153,14 @@ nav .Login {
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
   width: 75px;
   height: 30px;
-  padding: 0px 8px;
+  padding: 3px 20px;
   font-family: "Noto Sans KR";
   font-size: 14px;
   font-weight: 400;
   line-height: 20.28px;
   text-align: center;
   color: #000000;
+  border-radius: 5px;
 }
 
 .category-card-section h3 {
