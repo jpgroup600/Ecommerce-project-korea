@@ -1297,7 +1297,7 @@ footer .copyright p {
   position: absolute;
   width: 346.51px;
   height: 2px;
-  background-color: #9E9E9E;
+  background-color: #9e9e9e;
 }
 .user-section .right-user-profile .reviews .reviews-cards .review-card-center {
   margin-top: 35px;
@@ -1320,6 +1320,185 @@ footer .copyright p {
   line-height: 19.36px;
   text-align: left;
   color: #000000;
+}
+
+.brand-section {
+  width: 1220px;
+  margin: 0 auto;
+}
+.brand-section .brand-left {
+  width: 797px;
+  margin: 0 auto;
+}
+.brand-section .brand-left .brand-title {
+  padding-top: 50px;
+}
+.brand-section .brand-left .brand-title h1 {
+  font-family: "Inter";
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 33.89px;
+  text-align: left;
+  color: #000000;
+  margin-bottom: 15px;
+}
+.brand-section .brand-left .brand-title .blog-left {
+  padding-top: 20px;
+  font-family: "Noto Sans KR";
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20.27px;
+  text-align: left;
+}
+.brand-section .brand-left .brand-title p {
+  font-family: "Noto Sans KR";
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 20.27px;
+  text-align: left;
+  color: #6d6d6d;
+  margin-bottom: 25px;
+}
+.brand-section .brand-left .brand-title h5 {
+  padding-top: 25px;
+  font-family: "Noto Sans KR";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 23.17px;
+  text-align: left;
+  color: #000000;
+  position: relative;
+  padding-bottom: 10px;
+}
+.brand-section .brand-left .brand-title h5::before {
+  content: attr(data-text);
+  position: absolute;
+  width: 797px;
+  height: 2px;
+  background-color: #f5f3f3;
+  bottom: 0px;
+}
+.brand-section .brand-left .brand-left-button {
+  padding-top: 50px;
+}
+.brand-section .brand-left .brand-left-button button {
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  width: 797px;
+  height: 50px;
+  background-color: #f5f3f3;
+  font-family: "Noto Sans KR";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+  color: #6d6d6d;
+}
+.brand-section .brand-right {
+  margin: 60px auto 0 205px;
+  width: 383px;
+  height: 751px !important;
+  border: 2px solid #f5f3f3;
+  border-radius: 13px;
+  padding: 25px 20px 0px 20px;
+}
+.brand-section .brand-right table {
+  height: 659px;
+  width: 301px;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+.brand-section .brand-right table tr th {
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16.94px;
+  text-align: left;
+  color: #000000;
+}
+.brand-section .brand-right table tr td {
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16.94px;
+  text-align: left;
+  color: #6d6d6d;
+}
+.brand-section .brand-right table tr td p {
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.36px;
+  text-align: left;
+  color: #000000 !important;
+}
+.brand-section .brand-right table tr td button {
+  margin-top: 20px;
+  width: 300px;
+  height: 50px;
+  border-radius: 2px;
+  background-color: #2C9512;
+  font-family: "Noto Sans KR";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+  color: #ffffff;
+}
+.brand-section .brand-right table tr td .event-btn {
+  width: 300px;
+  height: 100px;
+  background-color: #f5f3f3;
+  font-family: "Noto Sans KR";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+  color: #000000;
+}
+.brand-section .chines-text {
+  width: 767px;
+  padding: 20px;
+}
+.brand-section .chines-text .chines-heading h2 {
+  font-family: "Noto Sans KR";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: left;
+  color: #000000;
+  white-space: nowrap;
+}
+.brand-section .chines-text .chines-heading p {
+  font-family: "Noto Sans KR";
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: left;
+  color: #000000;
+}
+.brand-section .chines-text .chines-headings h2 {
+  font-family: "Noto Sans KR";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: left;
+  color: #000000;
+  white-space: nowrap;
+}
+.brand-section .chines-text .chines-headings p {
+  font-family: "Noto Sans KR";
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: left;
+  color: #000000;
+}
+.brand-section .chines-text .chines-headings .bottom-border {
+  margin-top: 20px;
+  width: 622px;
+  border: 2px solid #F5F3F3;
 }
 
 @media (max-width: 1920px) {

@@ -1321,22 +1321,19 @@ footer {
           }
         }
       }
-    
-
     }
-    .reviews{
+    .reviews {
       margin-top: 90px;
-      .reviews-section{
+      .reviews-section {
         display: flex;
         justify-content: space-between;
-        h2{
+        h2 {
           font-family: $Noto;
-  font-size: 22px;
-font-weight: 700;
-line-height: 31.86px;
-text-align: left;
-color: #2c9512;
-
+          font-size: 22px;
+          font-weight: 700;
+          line-height: 31.86px;
+          text-align: left;
+          color: #2c9512;
         }
         .category-btn {
           a {
@@ -1356,83 +1353,272 @@ color: #2c9512;
           }
         }
       }
-      .reviews-cards{
+      .reviews-cards {
         margin-top: 20px;
         width: 410px;
         height: 269px;
         border-radius: 10px;
         background-color: $white;
         padding: 30px 25px;
-       
-        .review-headering{
-          h3{
-            font-family: $Inter;
-font-size: 20px;
-font-weight: 600;
-line-height: 24.2px;
-text-align: left;
-color: #000000;
-margin-bottom: 18px;
-span{
-  font-family: $Inter;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 18.15px;
-  text-align: left;
-  color: #86868685;
-  margin-left: 15px;
-  
-}
 
+        .review-headering {
+          h3 {
+            font-family: $Inter;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 24.2px;
+            text-align: left;
+            color: #000000;
+            margin-bottom: 18px;
+            span {
+              font-family: $Inter;
+              font-size: 15px;
+              font-weight: 400;
+              line-height: 18.15px;
+              text-align: left;
+              color: #86868685;
+              margin-left: 15px;
+            }
           }
-          p{
+          p {
             font-family: $Inter;
             font-size: 15px;
             font-weight: 400;
             line-height: 18.15px;
             text-align: left;
             position: relative;
-            color: #3C3C3C85;
+            color: #3c3c3c85;
 
-            &::before{
-             
+            &::before {
               content: attr(data-text);
               bottom: -100%;
               position: absolute;
               width: 346.51px;
               height: 2px;
-              background-color: #9E9E9E;
-        //  box-shadow: 0px 3px 6.5px 0px;
-             
+              background-color: #9e9e9e;
+              //  box-shadow: 0px 3px 6.5px 0px;
             }
-            
           }
         }
-        .review-card-center{
+        .review-card-center {
           margin-top: 35px;
-          h5{
+          h5 {
             font-family: $Inter;
-font-size: 16px;
-font-weight: 400;
-line-height: 19.36px;
-text-align: left;
-color: #000000;
-
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19.36px;
+            text-align: left;
+            color: #000000;
           }
         }
-        .review-zero-card{
+        .review-zero-card {
           margin-top: 40px;
-         p{
-          font-family: $Inter;
-font-size: 16px;
-font-weight: 400;
-line-height: 19.36px;
-text-align: left;
-color: #000000;
-
-         }
+          p {
+            font-family: $Inter;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19.36px;
+            text-align: left;
+            color: #000000;
+          }
         }
       }
+    }
+  }
+}
+
+// Desktop 17
+
+.brand-section {
+  width: 1220px;
+  margin: 0 auto;
+
+  .brand-left {
+    width: 797px;
+    margin: 0 auto;
+    .brand-title {
+      padding-top: 50px;
+
+      h1 {
+        font-family: $Inter;
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 33.89px;
+        text-align: left;
+        color: #000000;
+        margin-bottom: 15px;
+      }
+      .blog-left {
+        padding-top: 20px;
+        font-family: $Noto;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 20.27px;
+        text-align: left;
+      }
+      p {
+        font-family: $Noto;
+        font-size: 14px;
+        font-weight: 900;
+        line-height: 20.27px;
+        text-align: left;
+        color: #6d6d6d;
+        margin-bottom: 25px;
+      }
+
+      h5 {
+        padding-top: 25px;
+        font-family: $Noto;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 23.17px;
+        text-align: left;
+        color: #000000;
+        position: relative;
+        padding-bottom: 10px;
+
+        &::before {
+          content: attr(data-text);
+          position: absolute;
+          width: 797px;
+          height: 2px;
+          background-color: #f5f3f3;
+          bottom: 0px;
+        }
+      }
+    }
+    .brand-left-button {
+      padding-top: 50px;
+
+      button {
+        justify-content: center;
+        align-items: center;
+        gap: 9px;
+        width: 797px;
+        height: 50px;
+        background-color: #f5f3f3;
+        font-family: $Noto;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 20px;
+        text-align: center;
+        color: #6d6d6d;
+      }
+    }
+  }
+
+  .brand-right {
+    margin: 60px auto 0 205px;
+    width: 383px;
+    height: 751px !important;
+    border: 2px solid #f5f3f3;
+    border-radius: 13px;
+    padding: 25px 20px 0px 20px;
+
+    table {
+      height: 659px;
+      width: 301px;
+      margin: 0 auto;
+      border-collapse: collapse;
+      tr {
+        th {
+          font-family: $Inter;
+          font-size: 14px;
+          font-weight: 700;
+          line-height: 16.94px;
+          text-align: left;
+          color: #000000;
+        }
+        td {
+          font-family: $Inter;
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 16.94px;
+          text-align: left;
+          color: #6d6d6d;
+          p {
+            font-family: $Inter;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19.36px;
+            text-align: left;
+            color: #000000 !important;
+          }
+          button {
+            margin-top: 20px;
+            width: 300px;
+            height: 50px;
+            border-radius: 2px;
+            background-color: $green;
+            font-family: $Noto;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 20px;
+            text-align: center;
+            color: #ffffff;
+          }
+          .event-btn {
+            width: 300px;
+            height: 100px;
+            background-color: #f5f3f3;
+            font-family: $Noto;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 20px;
+            text-align: center;
+            color: #000000;
+          }
+        }
+      }
+    }
+  }
+  .chines-text {
+    width: 767px;
+    padding: 20px;
+    .chines-heading {
+      h2 {
+        font-family: $Noto;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 20px;
+        text-align: left;
+        color: #000000;
+        white-space: nowrap;
+      }
+      p {
+        font-family: $Noto;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 20px;
+        text-align: left;
+        color: #000000;
+      }
+    }
+    .chines-headings {
+
+      h2 {
+        font-family: $Noto;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 20px;
+        text-align: left;
+        color: #000000;
+        white-space: nowrap;
+      }
+      p {
+        font-family: $Noto;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 20px;
+        text-align: left;
+        color: #000000;
+      }
+     .bottom-border{
+      margin-top: 20px;
+      width: 622px;
+      border: 2px solid #F5F3F3;
+
+     }
     }
   }
 }
