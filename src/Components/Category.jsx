@@ -31,10 +31,10 @@ const Category = () => {
                   <span><img src={Blog} alt="" /></span>
                     {items.heading}
                   </h3>
-                  <h4 className="text-start  mx-5">
+                  <h4 className="text-start  ">
                  {items.subheading}
                   </h4>
-                  <h5 className="text-start  mx-5 mb-3">{items.coupon}</h5>
+                  <h5 className="text-start mb-3">{items.coupon}</h5>
               </div>
             </div>
 
