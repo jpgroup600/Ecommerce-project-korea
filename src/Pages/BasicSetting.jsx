@@ -21,10 +21,12 @@ const BasicSetting = () => {
   const checkChanel = (input_chanel) => {
     if (activeChanel.includes(input_chanel)) {
       setActiveChanel(activeChanel.filter(chanel => chanel !== input_chanel));
+      setUserData({...userData, chanel : activeChanel.filter(chanel => chanel !== input_chanel)})
     }
 
     else {
       setActiveChanel([...activeChanel, input_chanel])
+      setUserData({...userData, chanel : [...activeChanel, input_chanel]})
 
     }
   }
@@ -95,7 +97,7 @@ const BasicSetting = () => {
               <div className={` ${activeVisit ? 'visti' : 'ship'}`} onClick={() => {
                 setActiveVisit(true)
                 console.log(activeVisit)
-                basicSettings.campaignType = 'visit'
+                setUserData({...userData, campaignType : 'visit'})
               }}>
                 <h4>Visit</h4>
                 <p>Visit and reivew</p>
@@ -105,7 +107,7 @@ const BasicSetting = () => {
                 onClick={() => {
                   setActiveVisit(false)
                   console.log(activeVisit)
-                  basicSettings.campaignType = 'ship'
+                  setUserData({...userData, campaignType : 'ship'})
                 }}
               >
                 <h4>Ship</h4>
