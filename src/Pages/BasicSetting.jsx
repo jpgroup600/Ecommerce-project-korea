@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Plus from "../assets/images/plus.svg"
 import { useState } from "react";
 import { basicSettings } from "../Constants/ConstBasic";
@@ -32,8 +32,11 @@ const BasicSetting = () => {
   // function for cheking daum map api
   const onCompletePost = data => {
     setModalState(false);
-    setInputAddressValue(data.address);
-    setInputZipCodeValue(data.zonecode);
+    setUserData({...userData, address :{ address : data.address,
+      sido : data.sido,
+      sigungu : data.sigungu
+    }});
+    
   }; 
 
 
@@ -42,6 +45,13 @@ const BasicSetting = () => {
   const [modalState, setModalState] = useState(false)
   const [activeVisit, setActiveVisit] = useState(false)
   const [activeChanel, setActiveChanel] = useState([])
+  const [userData, setUserData] = useState(basicSettings)
+
+
+  // for debugging
+  useEffect(()=>{
+    console.log(userData)
+  },[userData])
 
   return (
     <>
