@@ -949,8 +949,17 @@ footer .copyright p {
   font-weight: 400;
   line-height: 20.27px;
   text-align: left;
-  color: #000000;
+  color: white;
+  background:#2c9512;
+  border-radius: 5px;
+  padding:5px 15px;
 }
+
+.basic-campian-section .basic-setting-main-page .Adress_to_visit .address-one .주소검색:hover {
+  cursor: pointer;
+}
+
+
 .basic-campian-section .basic-setting-main-page .last-container {
   width: 1100px;
   height: 50px;

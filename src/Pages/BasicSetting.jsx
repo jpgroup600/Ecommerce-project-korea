@@ -15,20 +15,31 @@ const BasicSetting = () => {
     marginTop: '170px'
   }
 
-  const checkChanel = (input_chanel) => {
-    if(activeChanel.includes(input_chanel))
-      {
-        setActiveChanel(activeChanel.filter(chanel => chanel !== input_chanel));
-      }
 
-      else {
-        setActiveChanel([...activeChanel, input_chanel])
-      
-       }
+
+  //check chanel state
+  const checkChanel = (input_chanel) => {
+    if (activeChanel.includes(input_chanel)) {
+      setActiveChanel(activeChanel.filter(chanel => chanel !== input_chanel));
+    }
+
+    else {
+      setActiveChanel([...activeChanel, input_chanel])
+
+    }
   }
 
-  
+  // function for cheking daum map api
+  const onCompletePost = data => {
+    setModalState(false);
+    setInputAddressValue(data.address);
+    setInputZipCodeValue(data.zonecode);
+  }; 
 
+
+
+  //set state
+  const [modalState, setModalState] = useState(false)
   const [activeVisit, setActiveVisit] = useState(false)
   const [activeChanel, setActiveChanel] = useState([])
 
@@ -71,7 +82,7 @@ const BasicSetting = () => {
             {/* Visit */}
 
             <div className="grid lg:grid-cols-2">
-              <div className={` ${activeVisit ? 'visti' : 'ship'}`} onClick={()=>{
+              <div className={` ${activeVisit ? 'visti' : 'ship'}`} onClick={() => {
                 setActiveVisit(true)
                 console.log(activeVisit)
                 basicSettings.campaignType = 'visit'
@@ -80,12 +91,12 @@ const BasicSetting = () => {
                 <p>Visit and reivew</p>
               </div>
 
-              <div className={` ${activeVisit ? 'ship' : 'visti'}`} 
-              onClick={()=>{
-                setActiveVisit(false)
-                console.log(activeVisit)
-                basicSettings.campaignType = 'ship'
-              }}
+              <div className={` ${activeVisit ? 'ship' : 'visti'}`}
+                onClick={() => {
+                  setActiveVisit(false)
+                  console.log(activeVisit)
+                  basicSettings.campaignType = 'ship'
+                }}
               >
                 <h4>Ship</h4>
                 <p>Get shipping and review</p>
@@ -98,24 +109,24 @@ const BasicSetting = () => {
               <h3>Chanel</h3>
               <div className="grid lg:grid-cols-5 mt-6 ">
                 <div className={`${activeChanel.includes('youtube') ? 'youtube' : 'insta'}`}
-                onClick={()=> {checkChanel('youtube')}}
+                  onClick={() => { checkChanel('youtube') }}
                 >Youtube</div>
 
                 <div className={`${activeChanel.includes('instagram') ? 'youtube' : 'insta'}`}
-                 onClick={()=> {checkChanel('instagram')}}
+                  onClick={() => { checkChanel('instagram') }}
                 >instagram</div>
 
                 <div className={`${activeChanel.includes('blog') ? 'youtube' : 'insta'}`}
-                 onClick={()=> {checkChanel('blog')}}
+                  onClick={() => { checkChanel('blog') }}
                 >Blog</div>
 
 
                 <div className={`${activeChanel.includes('web') ? 'youtube' : 'insta'}`}
-                onClick={()=> {checkChanel('web')}}
+                  onClick={() => { checkChanel('web') }}
                 >Web</div>
 
                 <div className={`${activeChanel.includes('etc') ? 'youtube' : 'insta'}`}
-                onClick={()=> {checkChanel('etc')}}
+                  onClick={() => { checkChanel('etc') }}
                 >Etc</div>
 
               </div>
@@ -123,12 +134,21 @@ const BasicSetting = () => {
 
             {/* Adress to visit */}
             <div className="Adress_to_visit">
+
+
               <div className="address_to_visit_para">
                 <p>Adress to visit</p>
               </div>
               <div className="address-one mt-3 px-5">
+                {/* change this style */}
+                <DaumPostcode
+                style={{width:'400px', 
+                height: '400px',
+                display: modalState ? 'block' : 'none'}}
+                onComplete={onCompletePost}
+                ></DaumPostcode> 
                 <p className="주소설정">주소 설정</p>
-                <p className="주소검색">주소 검색</p>
+                <p className="주소검색"  onClick={()=>{setModalState(true)}}>주소 검색</p>
               </div>
             </div>
 
@@ -139,7 +159,7 @@ const BasicSetting = () => {
             </div>
 
             {/* Drop */}
-            
+
 
 
             <div className="form-data ">
@@ -149,7 +169,7 @@ const BasicSetting = () => {
               </div>
             </div>
 
-            
+
 
 
 
@@ -242,21 +262,21 @@ const BasicSetting = () => {
             </div>
 
 
-            
-
-            
-
-            
 
 
-            
+
+
+
+
+
+
 
             {/* End */}
 
           </div>
         </div>
         <div className="2xl:px-12  mt-10 mb-12" style={{ paddingBottom: '90px' }}>
-        <div className="flex justify-between max-w-[1220px] mx-auto">
+          <div className="flex justify-between max-w-[1220px] mx-auto">
             <div className="bottom-btn-one ">
               <p>캠페인 미리보기</p>
             </div>
