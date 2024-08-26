@@ -1,5 +1,9 @@
 import React from "react";
 import Plus from "../assets/images/plus.svg"
+import { useState } from "react";
+import { basicSettings } from "../Constants/ConstBasic";
+import DaumPostcode from 'react-daum-postcode';
+
 const BasicSetting = () => {
 
   const InputItems = {
@@ -10,6 +14,23 @@ const BasicSetting = () => {
   const basicInfo = {
     marginTop: '170px'
   }
+
+  const checkChanel = (input_chanel) => {
+    if(activeChanel.includes(input_chanel))
+      {
+        setActiveChanel(activeChanel.filter(chanel => chanel !== input_chanel));
+      }
+
+      else {
+        setActiveChanel([...activeChanel, input_chanel])
+      
+       }
+  }
+
+  
+
+  const [activeVisit, setActiveVisit] = useState(false)
+  const [activeChanel, setActiveChanel] = useState([])
 
   return (
     <>
@@ -41,6 +62,85 @@ const BasicSetting = () => {
               </div>
             </div>
 
+            {/* basic */}
+            <div className="basic-info-capian-type mt-12">
+              <p>Campaign type</p>
+            </div>
+
+
+            {/* Visit */}
+
+            <div className="grid lg:grid-cols-2">
+              <div className={` ${activeVisit ? 'visti' : 'ship'}`} onClick={()=>{
+                setActiveVisit(true)
+                console.log(activeVisit)
+                basicSettings.campaignType = 'visit'
+              }}>
+                <h4>Visit</h4>
+                <p>Visit and reivew</p>
+              </div>
+
+              <div className={` ${activeVisit ? 'ship' : 'visti'}`} 
+              onClick={()=>{
+                setActiveVisit(false)
+                console.log(activeVisit)
+                basicSettings.campaignType = 'ship'
+              }}
+              >
+                <h4>Ship</h4>
+                <p>Get shipping and review</p>
+              </div>
+            </div>
+
+
+            {/* Chanel  youtube active insta inactive*/}
+            <div className="chanel-social">
+              <h3>Chanel</h3>
+              <div className="grid lg:grid-cols-5 mt-6 ">
+                <div className={`${activeChanel.includes('youtube') ? 'youtube' : 'insta'}`}
+                onClick={()=> {checkChanel('youtube')}}
+                >Youtube</div>
+
+                <div className={`${activeChanel.includes('instagram') ? 'youtube' : 'insta'}`}
+                 onClick={()=> {checkChanel('instagram')}}
+                >instagram</div>
+
+                <div className={`${activeChanel.includes('blog') ? 'youtube' : 'insta'}`}
+                 onClick={()=> {checkChanel('blog')}}
+                >Blog</div>
+
+
+                <div className={`${activeChanel.includes('web') ? 'youtube' : 'insta'}`}
+                onClick={()=> {checkChanel('web')}}
+                >Web</div>
+
+                <div className={`${activeChanel.includes('etc') ? 'youtube' : 'insta'}`}
+                onClick={()=> {checkChanel('etc')}}
+                >Etc</div>
+
+              </div>
+            </div>
+
+            {/* Adress to visit */}
+            <div className="Adress_to_visit">
+              <div className="address_to_visit_para">
+                <p>Adress to visit</p>
+              </div>
+              <div className="address-one mt-3 px-5">
+                <p className="주소설정">주소 설정</p>
+                <p className="주소검색">주소 검색</p>
+              </div>
+            </div>
+
+            {/* 나머지 주소 입력 */}
+
+            <div className="last-container mt-2">
+              <p>나머지 주소 입력</p>
+            </div>
+
+            {/* Drop */}
+            
+
 
             <div className="form-data ">
               <div className="form-input-group">
@@ -48,6 +148,8 @@ const BasicSetting = () => {
                 <textarea name="" id="" rows={10}></textarea>
               </div>
             </div>
+
+            
 
 
 
@@ -124,28 +226,6 @@ const BasicSetting = () => {
 
             </div>
 
-
-            {/* basic */}
-            <div className="basic-info-capian-type mt-12">
-              <p>Campaign type</p>
-            </div>
-
-
-            {/* Visit */}
-
-            <div className="grid lg:grid-cols-2">
-              <div className="visti">
-                <h4>Visit</h4>
-                <p>Visit and reivew</p>
-              </div>
-
-              <div className="ship">
-                <h4>Ship</h4>
-                <p>Get shipping and review</p>
-              </div>
-            </div>
-
-            {/* Drop */}
             <div className="drop">
               <div className="Main-image">
                 <p>Main image (Max 5)</p>
@@ -161,42 +241,22 @@ const BasicSetting = () => {
               </div>
             </div>
 
-            {/* Adress to visit */}
-            <div className="Adress_to_visit">
-              <div className="address_to_visit_para">
-                <p>Adress to visit</p>
-              </div>
-              <div className="address-one mt-3 px-5">
-                <p className="주소설정">주소 설정</p>
-                <p className="주소검색">주소 검색</p>
-              </div>
-            </div>
 
-            {/* 나머지 주소 입력 */}
+            
 
-            <div className="last-container mt-2">
-              <p>나머지 주소 입력</p>
-            </div>
+            
+
+            
 
 
-            {/* Chanel */}
-            <div className="chanel-social">
-              <h3>Chanel</h3>
-              <div className="grid lg:grid-cols-5 mt-6 ">
-                <div className="youtube">Youtube</div>
-                <div className="insta">instagram</div>
-                <div className="insta">Blog</div>
-                <div className="insta">Web</div>
-                <div className="insta">Etc</div>
-              </div>
-            </div>
+            
 
             {/* End */}
 
           </div>
         </div>
         <div className="2xl:px-12  mt-10 mb-12" style={{ paddingBottom: '90px' }}>
-          <div className="flex justify-between max-w-[1220px] mx-auto">
+        <div className="flex justify-between max-w-[1220px] mx-auto">
             <div className="bottom-btn-one ">
               <p>캠페인 미리보기</p>
             </div>
