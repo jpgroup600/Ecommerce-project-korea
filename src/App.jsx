@@ -14,15 +14,17 @@ const App = () => {
   return (
     <>
     <Navbar />
-    <SliderContainer />
-    <SmallCard />
-    <Category />
-    <EventBanner />
+    <Routes>
+      <Route path='/' element={<Homepage />}/>
+      <Route path='/login' element={<Login />} />
+      <Route path='/campian' element={<Campian />} />
+      <Route path='/Basic/Setting' element={<BasicSetting />} />
+      <Route path='/User' element={<User />} />
+    </Routes>
 
-    <Slider2 />
-    <AgainCategory />
-    <ContactBanner />
     <Footer />
+
+   
     </>
   )
 }
