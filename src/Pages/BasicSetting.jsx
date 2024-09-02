@@ -31,6 +31,19 @@ const BasicSetting = () => {
     }
   }
 
+  const checkWeek = (input_week) => {
+    if (activeWeek.includes(input_week)) {
+      setActiveWeek(activeWeek.filter(week => week !== input_week));
+      setUserData({...userData, week : activeWeek.filter(week => week !== input_week)})
+    }
+
+    else {
+      setActiveWeek([...activeWeek, input_week])
+      setUserData({...userData, week : [...activeWeek, input_week]})
+
+    }
+  }
+
   // function for cheking daum map api
   const onCompletePost = data => {
     setModalState(false);
@@ -47,6 +60,7 @@ const BasicSetting = () => {
   const [modalState, setModalState] = useState(false)
   const [activeVisit, setActiveVisit] = useState(false)
   const [activeChanel, setActiveChanel] = useState([])
+  const [activeWeek, setActiveWeek] = useState([])
   const [userData, setUserData] = useState(basicSettings)
 
 
@@ -79,9 +93,9 @@ const BasicSetting = () => {
             </div>
 
             <div className="form-data ">
-              <div className="form-input-group">
+              <div className="">
                 <label>Campaign Name(30letter)</label>
-                <input type="text" placeholder="campaign name" />
+                <input className="input-campaign-name w-full mt-4 h-[50px] px-4 rounded-[5px]" type="text" placeholder="campaign name" />
               </div>
             </div>
 
@@ -93,7 +107,7 @@ const BasicSetting = () => {
 
             {/* Visit */}
 
-            <div className="grid lg:grid-cols-2">
+            <div className="flex justify-between">
               <div className={` ${activeVisit ? 'visti' : 'ship'}`} onClick={() => {
                 setActiveVisit(true)
                 console.log(activeVisit)
@@ -119,7 +133,7 @@ const BasicSetting = () => {
             {/* Chanel  youtube active insta inactive*/}
             <div className="chanel-social">
               <h3>Chanel</h3>
-              <div className="grid lg:grid-cols-5 mt-6 ">
+              <div className="flex justify-between mt-4">
                 <div className={`${activeChanel.includes('youtube') ? 'youtube' : 'insta'}`}
                   onClick={() => { checkChanel('youtube') }}
                 >Youtube</div>
@@ -151,24 +165,95 @@ const BasicSetting = () => {
               <div className="address_to_visit_para">
                 <p>Adress to visit</p>
               </div>
-              <div className="address-one mt-3 px-5">
+              <div className="address-one mt-3 px-5" onClick={()=>{setModalState(true)}}>
+                <span>{userData.address.address ? userData.address.address : '주소 설정'}</span>
                 {/* change this style */}
                 <DaumPostcode
-                style={{width:'400px', 
+                style={{width:'700px', 
+                position:'absolute',
                 height: '400px',
                 display: modalState ? 'block' : 'none'}}
                 onComplete={onCompletePost}
                 ></DaumPostcode> 
-                <p className="주소설정">주소 설정</p>
                 <p className="주소검색"  onClick={()=>{setModalState(true)}}>주소 검색</p>
               </div>
             </div>
 
             {/* 나머지 주소 입력 */}
 
-            <div className="last-container mt-2">
-              <p>나머지 주소 입력</p>
+            <input type="text" placeholder="나머지 주소 입력" className="last-container mt-2"
+            onChange={(e)=>{
+              setUserData({...userData, address :{...userData.address, detailAddress : e.target.value}})
+            }}
+            >
+             
+            </input>
+
+            {/* Monday friday*/}
+            <div className="chanel-social">
+              <h3>가능한 요일</h3>
+              <div className="flex justify-between mt-4">
+                <div className={`${activeWeek.includes('mon') ? 'weekend-active' : 'weekend'}`}
+                  onClick={() => { checkWeek('mon') }}
+                >Monday</div>
+
+                <div className={`${activeWeek.includes('tue') ? 'weekend-active' : 'weekend'}`}
+                  onClick={() => { checkWeek('tue') }}
+                >Tuesday</div>
+
+                <div className={`${activeWeek.includes('wen') ? 'weekend-active' : 'weekend'}`}
+                  onClick={() => { checkWeek('wen') }}
+                >Wednesday</div>
+
+
+                <div className={`${activeWeek.includes('thur') ? 'weekend-active' : 'weekend'}`}
+                  onClick={() => { checkWeek('thur') }}
+                >Thursday</div>
+
+                <div className={`${activeWeek.includes('fri') ? 'weekend-active' : 'weekend'}`}
+                  onClick={() => { checkWeek('fri') }}
+                >Friday</div>
+
+                <div className={`${activeWeek.includes('sat') ? 'weekend-active' : 'weekend'}`}
+                  onClick={() => { checkWeek('sat') }}
+                >Saturday</div>
+
+                <div className={`${activeWeek.includes('sun') ? 'weekend-active' : 'weekend'}`}
+                  onClick={() => { checkWeek('sun') }}
+                >Sunday</div>
+
+              </div>
             </div>
+
+            {/* Time */}
+            <input type="time"  className="time-input w-full mt-5 rounded-[5px] h-[50px] px-8" placeholder="시간 설정"></input>
+
+
+            {/* how many membmers */}
+            <div className="form-data">
+            <div className="flex justify-between">
+                <div className="form-input-group mt-12" >
+                  <label>How many members</label>
+                  <div className="member-input">
+                    <span>-</span>
+                    <p>1</p>
+                    <span>+</span>
+                  </div>
+                  <span className="mt-2">range of 1~100</span>
+                </div>
+
+
+                <div className="form-input-group mt-12" >
+                  <label >(Optional) Points to give out</label>
+                  <div className="zero-input">
+                    <p>0</p>
+                    <strong>p</strong>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
 
             {/* Drop */}
 
@@ -213,6 +298,27 @@ const BasicSetting = () => {
                 </div>
               </div>
 
+
+              <div className="grid lg:grid-cols-2">
+                <div className="form-input-group mt-12" >
+                  <label>How many members</label>
+                  <div className="member-input">
+                    <span>-</span>
+                    <p>1</p>
+                    <span>+</span>
+                  </div>
+                  <span className="mt-2">range of 1~100</span>
+                </div>
+
+
+                <div className="form-input-group mt-12" >
+                  <label >(Optional) Points to give out</label>
+                  <div className="zero-input">
+                    <p>0</p>
+                    <strong>p</strong>
+                  </div>
+                </div>
+              </div>
 
               <div className="grid lg:grid-cols-2">
                 <div className="form-input-group mt-12" >
