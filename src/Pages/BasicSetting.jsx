@@ -21,12 +21,12 @@ const BasicSetting = () => {
   const checkChanel = (input_chanel) => {
     if (activeChanel.includes(input_chanel)) {
       setActiveChanel(activeChanel.filter(chanel => chanel !== input_chanel));
-      setUserData({...userData, chanel : activeChanel.filter(chanel => chanel !== input_chanel)})
+      setUserData({ ...userData, chanel: activeChanel.filter(chanel => chanel !== input_chanel) })
     }
 
     else {
       setActiveChanel([...activeChanel, input_chanel])
-      setUserData({...userData, chanel : [...activeChanel, input_chanel]})
+      setUserData({ ...userData, chanel: [...activeChanel, input_chanel] })
 
     }
   }
@@ -34,12 +34,12 @@ const BasicSetting = () => {
   const checkWeek = (input_week) => {
     if (activeWeek.includes(input_week)) {
       setActiveWeek(activeWeek.filter(week => week !== input_week));
-      setUserData({...userData, week : activeWeek.filter(week => week !== input_week)})
+      setUserData({ ...userData, week: activeWeek.filter(week => week !== input_week) })
     }
 
     else {
       setActiveWeek([...activeWeek, input_week])
-      setUserData({...userData, week : [...activeWeek, input_week]})
+      setUserData({ ...userData, week: [...activeWeek, input_week] })
 
     }
   }
@@ -47,12 +47,15 @@ const BasicSetting = () => {
   // function for cheking daum map api
   const onCompletePost = data => {
     setModalState(false);
-    setUserData({...userData, address :{ address : data.address,
-      sido : data.sido,
-      sigungu : data.sigungu
-    }});
-    
-  }; 
+    setUserData({
+      ...userData, address: {
+        address: data.address,
+        sido: data.sido,
+        sigungu: data.sigungu
+      }
+    });
+
+  };
 
 
 
@@ -65,9 +68,9 @@ const BasicSetting = () => {
 
 
   // for debugging
-  useEffect(()=>{
+  useEffect(() => {
     console.log(userData)
-  },[userData])
+  }, [userData])
 
   return (
     <>
@@ -111,7 +114,7 @@ const BasicSetting = () => {
               <div className={` ${activeVisit ? 'visti' : 'ship'}`} onClick={() => {
                 setActiveVisit(true)
                 console.log(activeVisit)
-                setUserData({...userData, campaignType : 'visit'})
+                setUserData({ ...userData, campaignType: 'visit' })
               }}>
                 <h4>Visit</h4>
                 <p>Visit and reivew</p>
@@ -121,7 +124,7 @@ const BasicSetting = () => {
                 onClick={() => {
                   setActiveVisit(false)
                   console.log(activeVisit)
-                  setUserData({...userData, campaignType : 'ship'})
+                  setUserData({ ...userData, campaignType: 'ship' })
                 }}
               >
                 <h4>Ship</h4>
@@ -165,28 +168,30 @@ const BasicSetting = () => {
               <div className="address_to_visit_para">
                 <p>Adress to visit</p>
               </div>
-              <div className="address-one mt-3 px-5" onClick={()=>{setModalState(true)}}>
+              <div className="address-one mt-3 px-5" onClick={() => { setModalState(true) }}>
                 <span>{userData.address.address ? userData.address.address : '주소 설정'}</span>
                 {/* change this style */}
                 <DaumPostcode
-                style={{width:'700px', 
-                position:'absolute',
-                height: '400px',
-                display: modalState ? 'block' : 'none'}}
-                onComplete={onCompletePost}
-                ></DaumPostcode> 
-                <p className="주소검색"  onClick={()=>{setModalState(true)}}>주소 검색</p>
+                  style={{
+                    width: '700px',
+                    position: 'absolute',
+                    height: '400px',
+                    display: modalState ? 'block' : 'none'
+                  }}
+                  onComplete={onCompletePost}
+                ></DaumPostcode>
+                <p className="주소검색" onClick={() => { setModalState(true) }}>주소 검색</p>
               </div>
             </div>
 
             {/* 나머지 주소 입력 */}
 
             <input type="text" placeholder="나머지 주소 입력" className="last-container mt-2"
-            onChange={(e)=>{
-              setUserData({...userData, address :{...userData.address, detailAddress : e.target.value}})
-            }}
+              onChange={(e) => {
+                setUserData({ ...userData, address: { ...userData.address, detailAddress: e.target.value } })
+              }}
             >
-             
+
             </input>
 
             {/* Monday friday*/}
@@ -226,18 +231,28 @@ const BasicSetting = () => {
             </div>
 
             {/* Time */}
-            <input type="time"  className="time-input w-full mt-5 rounded-[5px] h-[50px] px-8" placeholder="시간 설정"></input>
+            <input type="time" className="time-input w-full mt-5 rounded-[5px] h-[50px] px-8" placeholder="시간 설정"></input>
 
 
             {/* how many membmers */}
             <div className="form-data">
-            <div className="flex justify-between">
+              <div className="flex justify-between">
                 <div className="form-input-group mt-12" >
                   <label>How many members</label>
                   <div className="member-input">
-                    <span>-</span>
-                    <p>1</p>
-                    <span>+</span>
+                    <span className="plus-minus-btn"
+                      onClick={() => {
+                        if (userData.member > 1) {
+                          setUserData({ ...userData, member: userData.member - 1 })
+                        }
+                      }}>-</span>
+                    <p>{userData.member}</p>
+                    <span className="plus-minus-btn"
+                      onClick={() => {
+                        if (userData.member < 100) {
+                          setUserData({ ...userData, member: userData.member + 1 })
+                        }
+                      }}>+</span>
                   </div>
                   <span className="mt-2">range of 1~100</span>
                 </div>
@@ -246,7 +261,9 @@ const BasicSetting = () => {
                 <div className="form-input-group mt-12" >
                   <label >(Optional) Points to give out</label>
                   <div className="zero-input">
-                    <p>0</p>
+                    <input type="number"
+                      className="zero-input-number"
+                      value={userData.points} onChange={(e) => setUserData({ ...userData, points: e.target.value })} />
                     <strong>p</strong>
                   </div>
                 </div>
@@ -256,96 +273,6 @@ const BasicSetting = () => {
 
 
             {/* Drop */}
-
-
-
-            <div className="form-data ">
-              <div className="form-input-group">
-                <label>Service</label>
-                <textarea name="" id="" rows={10}></textarea>
-              </div>
-            </div>
-
-
-
-
-
-
-            <div className="form-data">
-              <div className="grid lg:grid-cols-2">
-                <div className="form-input-group" >
-                  <label>Campaign time (Reivewer time / At least 1week)</label>
-                  <input type="date" style={{ width: '514px ' }} />
-                </div>
-
-
-                <div className="form-input-group" >
-                  <label style={{ visibility: 'hidden' }}>Campaign time (Reivewer time / At least 1week)</label>
-                  <input type="date" className="date" style={InputItems} />
-                </div>
-              </div>
-
-              <div className="grid lg:grid-cols-2">
-                <div className="form-input-group mt-12" >
-                  <label>Expericence & Review Due</label>
-                  <input type="date" style={InputItems} />
-                </div>
-
-
-                <div className="form-input-group mt-12" >
-                  <label style={{ visibility: 'hidden' }}>Campaign time (Reivewer time / At least 1week)</label>
-                  <input type="date" className="date" style={InputItems} />
-                </div>
-              </div>
-
-
-              <div className="grid lg:grid-cols-2">
-                <div className="form-input-group mt-12" >
-                  <label>How many members</label>
-                  <div className="member-input">
-                    <span>-</span>
-                    <p>1</p>
-                    <span>+</span>
-                  </div>
-                  <span className="mt-2">range of 1~100</span>
-                </div>
-
-
-                <div className="form-input-group mt-12" >
-                  <label >(Optional) Points to give out</label>
-                  <div className="zero-input">
-                    <p>0</p>
-                    <strong>p</strong>
-                  </div>
-                </div>
-              </div>
-
-              <div className="grid lg:grid-cols-2">
-                <div className="form-input-group mt-12" >
-                  <label>How many members</label>
-                  <div className="member-input">
-                    <span>-</span>
-                    <p>1</p>
-                    <span>+</span>
-                  </div>
-                  <span className="mt-2">range of 1~100</span>
-                </div>
-
-
-                <div className="form-input-group mt-12" >
-                  <label >(Optional) Points to give out</label>
-                  <div className="zero-input">
-                    <p>0</p>
-                    <strong>p</strong>
-                  </div>
-                </div>
-              </div>
-
-
-
-            </div>
-
-
 
             {/* baisc setting */}
 
@@ -378,6 +305,54 @@ const BasicSetting = () => {
                 </div>
               </div>
             </div>
+
+
+            {/* text area  */}
+            <div className="form-data ">
+              <div className="form-input-group">
+                <label>Service</label>
+                <textarea name="" id="" rows={10}></textarea>
+              </div>
+            </div>
+
+            <div className="form-data ">
+              <div className="form-input-group">
+                <label>Service</label>
+                <textarea name="" id="" rows={10}></textarea>
+              </div>
+            </div>
+
+            <div className="form-data ">
+              <div className="form-input-group">
+                <label>Service</label>
+                <textarea name="" id="" rows={10}></textarea>
+              </div>
+            </div>
+
+            <div className="form-data ">
+              <div className="form-input-group">
+                <label>Service</label>
+                <textarea name="" id="" rows={10}></textarea>
+              </div>
+            </div>
+
+            <div className="form-data ">
+              <div className="form-input-group">
+                <label>Service</label>
+                <textarea name="" id="" rows={10}></textarea>
+              </div>
+            </div>
+
+
+
+
+
+
+            
+
+
+
+            
 
 
 

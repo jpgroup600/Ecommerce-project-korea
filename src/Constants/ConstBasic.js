@@ -7,6 +7,7 @@ export const basicSettings = {
         sido: '',
         sigungu: '',
     },
+    member : 1,
     campaignStartDate : '',
     campaignEndDate : '',
     campaignStatus : '',
