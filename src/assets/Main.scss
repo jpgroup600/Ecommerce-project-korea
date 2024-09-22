@@ -883,18 +883,25 @@ footer {
       flex-direction: column;
     }
 
+
+
+    
     // Basic Info
     .visti {
-      margin-top: 30px;
-      width: 536px;
-      height: 238px;
-      border: 3px solid $green;
-      border-radius: 5px;
-      background-color: #2c95124d;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
+      .active{
+        border: 3px solid $green;
+        border-radius: 5px;
+        background-color: #2c95124d;
+        margin-top: 30px;
+        width: 536px;
+        height: 238px;
+       
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+    
       h4 {
         font-family: $Noto;
         font-size: 22px;

@@ -1,7 +1,21 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import FeakApi from "../JsonData/FeakApi.json";
 const SmallCard = () => {
   const data = FeakApi;
+
+  const [products,setProducts] = useState([])
+
+  const GetProducts = async()=>{
+    const respon = await fetch('http://localhost:8080/products',{
+      method:'GET',
+    })
+    const data = await respon.json()
+    console.log(data)
+  }
+
+  useEffect(()=>{
+    GetProducts()
+  },[])
 
   return (
     <>

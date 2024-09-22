@@ -4,9 +4,9 @@ import Merchant from "../assets/images/Merchant.svg";
 import NewverLogin from "../assets/images/NeverLogin.svg";
 import Kakao from "../assets/images/Kakao.svg";
 import { useForm } from 'react-hook-form';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
-const Login = () => {
+const Signup = () => {
   const {
     register,
     handleSubmit,
@@ -17,7 +17,7 @@ const Login = () => {
 
   const onSubmit = async (data) => {
     try {
-      const response = await fetch('http://localhost:8080/auth/login', {
+      const response = await fetch('http://localhost:8080/auth/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -28,8 +28,8 @@ const Login = () => {
       if (response.ok) {
         const result = await response.json();
         
-        alert('user login successful')
-        Navgation('/')
+        alert('user create successful')
+        Navgation('/login')
         console.log('Signup successful:', result);
       } else {
         console.log('Signup failed');
@@ -48,7 +48,7 @@ const Login = () => {
           <div className="login-log">
             <h3>Logo</h3>
           </div>
-          <div className="form-outline">
+          <div className="form-outline" style={{height:'221px'}}>
             <div className="review-section flex justify-between">
               <h2 className="flex items-center gap-2 review">
                 <span><img src={Review} alt="" /></span>
@@ -64,25 +64,33 @@ const Login = () => {
             </div>
             <form onSubmit={handleSubmit(onSubmit)}>
               <div className="form-group">
-                <input {...register('email', { required: true })} type="email" placeholder="UserName" />
+                <input {...register('name', { required: true })} type="text" placeholder="UserName" />
                 {errors.name && <p className="error-text">Name is required</p>}
               </div>
-             
-             <div className="form-group mt-2">
+              <div className="form-group mt-2">
+                <input {...register('email', { required: true })} type="email" placeholder="Email" />
+                {errors.email && <p className="error-text">Email is required</p>}
+              </div>
+              <div className="form-group mt-2">
                 <input {...register('password', { required: true })} type="password" placeholder="Password" />
                 {errors.password && <p className="error-text">Password is required</p>}
               </div>
-              <button className="login-btn" type="submit">Login</button>
+              <button className="login-btn" type="submit">Sign Up</button>
             </form>
 
             <div className="find-passowrd flex items-center justify-between px-3 mt-4">
-              <div className="checkbox-password flex items-center gap-5">
+              <div className="checkbox-password">
+                <p >
+                  <Link to="/singup" style={{textDecoration:'underline',textAlign:'right'}}>Login</Link>
+                </p>
+              </div>
+              {/* <div className="checkbox-password flex items-center gap-5">
                 <input type="checkbox" />
                 <p>Auto Login</p>
               </div>
               <div className="find-passowrd">
                 <p>Find Id | Password find</p>
-              </div>
+              </div> */}
             </div>
 
             {/* Login with  */}
@@ -128,4 +136,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Signup;

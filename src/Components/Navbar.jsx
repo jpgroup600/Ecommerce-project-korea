@@ -90,6 +90,9 @@ const Navbar = () => {
                 <NavLink to="login" className="  font-medium Login">
                   Login
                   </NavLink>
+                  <NavLink to="login" className="  font-medium Login">
+                  signup
+                  </NavLink>
                  
               </div>
             </div>

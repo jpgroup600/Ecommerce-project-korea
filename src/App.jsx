@@ -10,6 +10,7 @@ import Campian from './Pages/Campian'
 import BasicSetting from './Pages/BasicSetting'
 import User from './Pages/User'
 import Desktop17 from './Pages/Desktop17'
+import Signup from './Pages/Signup'
 
 
 const App = () => {
@@ -19,10 +20,11 @@ const App = () => {
     <Routes>
       <Route path='/' element={<Homepage />}/>
       <Route path='/login' element={<Login />} />
+      <Route path='/signup' element={<Signup/>} />
       <Route path='/campion' element={<Campian />} />
       <Route path='/Basic/Setting' element={<BasicSetting />} />
       <Route path='/User' element={<User />} />
-      <Route path='desktop_17' element={<Desktop17 />} />
+      <Route path='/desktop_17' element={<Desktop17 />} />
     </Routes>
 
     <Footer />

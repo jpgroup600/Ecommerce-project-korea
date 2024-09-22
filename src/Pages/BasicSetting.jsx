@@ -1,5 +1,8 @@
 import React from "react";
 import Plus from "../assets/images/plus.svg"
+import {NavLink} from "react-router-dom"
+
+
 const BasicSetting = () => {
 
   const InputItems={
@@ -134,10 +137,12 @@ const BasicSetting = () => {
 {/* Visit */}
 
     <div className="grid lg:grid-cols-2">
+      <NavLink>
     <div className="visti">
       <h4>Visit</h4>
       <p>Visit and reivew</p>
     </div>
+    </NavLink>
 
     <div className="ship">
       <h4>Ship</h4>
