@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import Plus from "../assets/images/plus.svg"
 import {NavLink} from "react-router-dom"
 
 
 const BasicSetting = () => {
+  const [activeSocial, setActiveSocial] = useState(null);
+
+  // Handler for click events
+  const handleClick = (social) => {
+    setActiveSocial(social);
+  };
 
   const InputItems={
     width:'514px',background:"transparent ",border:"1px solid #ccc"
@@ -195,6 +201,42 @@ const BasicSetting = () => {
       <div className="insta">Etc</div>
       </div>
     </div>
+
+    {/* <div className="chanel-social mb-12 pb-12">
+      <h3>Chanel</h3>
+      <div className="grid lg:grid-cols-5 mt-6">
+        <div
+          className={`youtube ${activeSocial === "youtube" ? "active" : ""}`}
+          onClick={() => handleClick("youtube")}
+        >
+          Youtube
+        </div>
+        <div
+          className={`insta ${activeSocial === "instagram" ? "active" : ""}`}
+          onClick={() => handleClick("instagram")}
+        >
+          Instagram
+        </div>
+        <div
+          className={`insta ${activeSocial === "blog" ? "active" : ""}`}
+          onClick={() => handleClick("blog")}
+        >
+          Blog
+        </div>
+        <div
+          className={`insta ${activeSocial === "web" ? "active" : ""}`}
+          onClick={() => handleClick("web")}
+        >
+          Web
+        </div>
+        <div
+          className={`insta ${activeSocial === "etc" ? "active" : ""}`}
+          onClick={() => handleClick("etc")}
+        >
+          Etc
+        </div>
+      </div>
+    </div> */}
 
 {/* End */}
 

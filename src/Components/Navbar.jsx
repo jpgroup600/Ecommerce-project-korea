@@ -90,7 +90,7 @@ const Navbar = () => {
                 <NavLink to="login" className="  font-medium Login">
                   Login
                   </NavLink>
-                  <NavLink to="login" className="  font-medium Login">
+                  <NavLink to="signup" className="  font-medium Login">
                   signup
                   </NavLink>
                  

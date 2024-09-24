@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from './Components/Navbar'
 
 import Footer from './Components/Footer'
+import "../src/assets/Main.scss"
 
 import Login from './Pages/Login'
 import Homepage from './Pages/Homepage'

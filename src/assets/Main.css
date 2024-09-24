@@ -810,13 +810,13 @@ footer .copyright p {
   display: flex;
   flex-direction: column;
 }
-.basic-campian-section .basic-setting-main-page .visti {
-  margin-top: 30px;
-  width: 536px;
-  height: 238px;
+.basic-campian-section .basic-setting-main-page .visti .active {
   border: 3px solid #2C9512;
   border-radius: 5px;
   background-color: rgba(44, 149, 18, 0.3019607843);
+  margin-top: 30px;
+  width: 536px;
+  height: 238px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1498,7 +1498,7 @@ footer .copyright p {
 .brand-section .chines-text .chines-headings .bottom-border {
   margin-top: 20px;
   width: 622px;
-  border: 2px solid #F5F3F3;
+  border: 2px solid #f5f3f3;
 }
 
 @media (max-width: 1920px) {
@@ -1573,4 +1573,20 @@ footer .copyright p {
   .footer-para-2 p {
     margin-left: 0 !important;
   }
+}
+.singup-container {
+  padding: 60px;
+}
+.singup-container .singup-heading {
+  display: flex;
+  justify-content: center;
+  border-bottom: 0.5px solid #9E9E9E;
+  padding-bottom: 15px;
+}
+.singup-container .singup-heading h1 {
+  font-family: "Inter";
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29.05px;
+  text-align: left;
 }/*# sourceMappingURL=Main.css.map */
