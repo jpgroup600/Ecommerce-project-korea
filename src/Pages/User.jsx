@@ -1,12 +1,51 @@
-import React from "react";
+import React,{useContext,useEffect} from "react";
 import UserInfo from "../assets/images/User.svg";
 import Dots from "../assets/images/dots.svg";
 import UserProfileLogo from "../assets/images/userProfile.svg";
 import PLUS from "../assets/images/PLuse.svg";
 import ProjectUser from "../assets/images/projectuser.svg";
 import BookMarked from "../assets/images/bookmarked.svg"
-
+import { AuthContext } from '../App'; // Import the context
+import axios from "axios";
 const User = () => {
+  const {name,token,email} = useContext(AuthContext); // Access context values
+  useEffect(() => {
+    const fetchData = async () => {
+      
+      try {
+       
+        const response = await axios.get(`http://localhost:8080/products/`, {
+          params: {
+            userId: email,
+          },
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${token}`,
+          },
+        });
+    
+       
+        if (response.status === 200) {
+          const result = response.data;
+          console.log(result);
+    
+          // All products Here
+    
+        } else if (response.status === 205) {
+          alert("No Campaigns Data found! Empty!");
+        } else {
+          alert("ERROR OCCURRED");
+        }
+      } catch (error) {
+        console.error("Error:", error);
+        alert("Failed to perform operation: " + error.message);
+      }
+    };
+
+    fetchData(); 
+  }, []); 
+    
+
   return (
     <>
       <div className="container">
@@ -23,7 +62,7 @@ const User = () => {
                   }}
                 />
                 <h4>NAME</h4>
-                <h6>000</h6>
+                <h6>{name}</h6>
                 <ul>
                   <li className="flex gap-2">
                     <img src={Dots} alt="" className="mt-1" />

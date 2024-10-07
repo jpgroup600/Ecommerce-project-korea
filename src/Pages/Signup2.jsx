@@ -6,7 +6,7 @@ import Kakao from "../assets/images/Kakao.svg";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 
-const Signup = () => {
+const InfluencerForm = () => {
   const {
     register,
     handleSubmit,
@@ -16,12 +16,54 @@ const Signup = () => {
   const Navgation = useNavigate();
 
   const onSubmit = async (data) => {
-    console.log(data)
+
+    
+    
+
+    const sent={
+      "name": data.name,
+      "email": data.email,
+      "password": data.password,
+      "businessName": data.influenceType,
+      "address": "NA",
+      "PhoneNumber": data.phoneNumber,
+      "signupPath": "NA",
+      "TextFild1": "NA",
+      "TextFild2": "NA",
+      "TextFild3": "NA"
+    }
+    
+    try {
+      const response = await fetch("http://localhost:8080/merchant/signup", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(sent),
+      });
+
+      if (response.status==201) {
+        const result = await response.json();
+        // alert("User created successfully");
+        Navgation("/login");
+      alert("Sign Up Successful!")
+      return 
+      } else {
+        if (response.status==409) {
+           alert("Signup failed user already exist");
+           return 
+        }
+        alert("Signup failed please fill fields correctly!");
+        return 
+      }
+    } catch (error) {
+         alert("Error:", error);
+    }
   };
 
   return (
     <>
-      <div className="container">
+      <div className="container mx-auto">
         <div className="singup-container">
           <div className="singup-heading">
             <h1>개인/법인 사업자 회원가입</h1>
@@ -79,6 +121,7 @@ const Signup = () => {
                   <input
                     type="number"
                     placeholder="인증번호 받기"
+                 
                     style={{ width: "123px", height: "40px" }}
                   />
                 </div>
@@ -195,4 +238,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default InfluencerForm;

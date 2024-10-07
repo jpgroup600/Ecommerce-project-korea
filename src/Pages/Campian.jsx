@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Category from '../Components/Category'
+import { AppProvider } from '../ContextApi/Api';
 
 const Campian = () => {
+  const {item} = useContext(AppProvider);
   return (
     <>
     <div className="container capian-secation 2xl:px-7">

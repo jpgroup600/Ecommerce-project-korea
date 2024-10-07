@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 import "../assets/Main.css";
 import SearchIcon from "../assets/images/Search.svg"
 import { NavLink } from "react-router-dom";
+import { AuthContext } from '../App'; // Import the context
+
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const {name} = useContext(AuthContext); // Access context values
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -87,12 +90,10 @@ const Navbar = () => {
                 >
                  How to use
                 </NavLink>
-                <NavLink to="login" className="  font-medium Login">
-                  Login
+                <NavLink to={name? '': "login"} className="  font-medium Login w-100">
+                  {name? name : 'Login'}
                   </NavLink>
-                  <NavLink to="signup" className="  font-medium Login">
-                  signup
-                  </NavLink>
+
                  
               </div>
             </div>

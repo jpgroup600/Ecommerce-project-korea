@@ -1,12 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import Review from "../assets/images/Review.svg";
 import Merchant from "../assets/images/Merchant.svg";
 import NewverLogin from "../assets/images/NeverLogin.svg";
 import Kakao from "../assets/images/Kakao.svg";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
+import Blog from "../assets/images/blogs.svg"
+import Insta from "../assets/images/insta.svg"
+import Youtube from "../assets/images/youtube.svg"
+import Tiktok from "../assets/images/Tiktok.svg"
+import More from "../assets/images/more.svg"
 
-const Signup = () => {
+const SignUp3 = () => {
+  const [selectedGender, setSelectedGender] = useState(null);
+
+  const [activeIndex, setActiveIndex] = useState(0);
+
+
+  const icons = [
+    { src: Blog, alt: 'Blog' },
+    { src: Insta, alt: 'Instagram' },
+    { src: Youtube, alt: 'YouTube' },
+    { src: Tiktok, alt: 'TikTok' },
+    { src: More, alt: 'More' },
+  ];
+
+
   const {
     register,
     handleSubmit,
@@ -16,15 +35,56 @@ const Signup = () => {
   const Navgation = useNavigate();
 
   const onSubmit = async (data) => {
-    console.log(data)
+
+    console.log(JSON.stringify(data))
+
+const sent=    {
+      "name": data.name,
+      "email": data.email,
+      "password": data.password,
+      "phoneNumber":data.phoneNumber,
+      "birthDate": data.birthdate,
+      "influenceType": "Social Media Influencer",
+      "textField1": "NA",
+      "textField2": "NA",
+      "textField3": "NA"
+    }
+    
+    try {
+      const response = await fetch("http://localhost:8080/auth/signup", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(sent),
+      });
+
+      if (response.status==201) {
+        const result = await response.json();
+        alert("Sign Up successfully");
+        Navgation("/login");
+        console.log("Signup successful:", result);
+        return 
+      }  if (response.status==409) {
+        alert("User Already Exists");
+        return 
+      }
+      else{
+        alert("Sign up failed");
+        return 
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("Sign Up Failed"+error);
+    }
   };
 
   return (
     <>
-      <div className="container">
+      <div className="container mx-auto">
         <div className="singup-container">
           <div className="singup-heading">
-            <h1>개인/법인 사업자 회원가입</h1>
+            <h1>인플루언서 회원가입</h1>
           </div>
           <div className="singup-form-container">
             <form action="" onSubmit={handleSubmit(onSubmit)}>
@@ -84,16 +144,76 @@ const Signup = () => {
                 </div>
                 <p className="message">휴대폰 인증을 진행해 주세요.</p>
               </div>
-              <label htmlFor="" className="block">
-                상호명
-                <span>*</span>
-              </label>
-              <input
-                type="text"
-                placeholder="최진성"
-                {...register("influenceType", { required: true })}
-              />
-              <p className="message">필수 입력 사항입니다.</p>
+              {/* Birthdate and Gender */}
+              <div className="birthandgender flex gap-3">
+                <div className="birthday">
+                  <label htmlFor="birthdate">생년월일</label>
+                  <input
+                    type="date"
+                    {...register("birthdate")}
+                    placeholder="1996.12.03"
+                    className="calender"
+                  />
+                </div>
+                <div className="gender">
+                  <label htmlFor="gender">성별</label>
+
+                  <div className="flex items-center">
+                    <label
+                      htmlFor="female"
+                      className={`flex items-center justify-center border rounded-lg w-20 h-10 cursor-pointer male ${
+                        selectedGender === "female"
+                          ? "border-blue-500 bg-blue-100"
+                          : "border-gray-300"
+                      }`}
+                    >
+                      <input
+                        id="female"
+                        type="radio"
+                        value="female"
+                        checked={selectedGender === "female"}
+                        onChange={() => setSelectedGender("female")}
+                        className="hidden"
+                      />
+                      여
+                    </label>
+
+                    <label
+                      htmlFor="male"
+                      className={`flex items-center justify-center border rounded-lg w-20 h-10 cursor-pointer male ${
+                        selectedGender === "male"
+                          ? "border-blue-500 bg-blue-100"
+                          : "border-gray-300"
+                      }`}
+                    >
+                      <input
+                        id="male"
+                        type="radio"
+                        value="male"
+                        checked={selectedGender === "male"}
+                        onChange={() => setSelectedGender("male")}
+                        className="hidden"
+                      />
+                      남
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div className="social-icons-tabs">
+      <label>인플루언서 유형</label>
+      <div className="flex items-center gap-2">
+        {icons.map((icon, index) => (
+          <div
+            key={index}
+            className={`fb ${activeIndex === index ? 'active' : ''}`} 
+            onClick={() => setActiveIndex(index)} 
+          >
+            <img src={icon.src} alt={icon.alt} />
+          </div>
+        ))}
+      </div>
+    </div>
 
               <label htmlFor="" className="block">
                 네이버 플레이스 or 홈페이지 주소 URL
@@ -102,17 +222,9 @@ const Signup = () => {
                 type="email"
                 placeholder="https://blog.naver.com/jaco3927"
               />
-              <p className="message">
-                본인의 업체와 관계없는 링크 기입 시 불이익이 있을 수 있습니다.
-              </p>
+             
 
-              <label htmlFor="" className="block">
-                가입 경로
-                <span>*</span>
-              </label>
-              <select>
-                <option value="">선택</option>
-              </select>
+              
 
               <div className="checkbox-container">
                 <label htmlFor="">약관 동의</label>
@@ -183,16 +295,16 @@ const Signup = () => {
         </div>
 
         <div className="how-to-use mx-auto">
-              <ul className="flex gap-6 mt-4">
-                <li>About us</li>
-                <li>Become Merchant</li>
-                <li>How to use</li>
-                <li>Privacy policy</li>
-              </ul>
-            </div>
+          <ul className="flex gap-6 mt-4">
+            <li>About us</li>
+            <li>Become Merchant</li>
+            <li>How to use</li>
+            <li>Privacy policy</li>
+          </ul>
+        </div>
       </div>
     </>
   );
 };
 
-export default Signup;
+export default SignUp3;
